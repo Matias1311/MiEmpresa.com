@@ -7,7 +7,7 @@
     margin: 0;
     list-style: none;
     text-decoration: none;
-}
+}   
 body {
     font-family: 'Quicksand', sans-serif;
     width: 100%;
@@ -78,7 +78,7 @@ header {
 .nav-list li:hover>ul {
     display: block;
 }
-.nav-element>ul>li:nth-child(2) {
+.nav-element:nth-child(3) {
     text-decoration: underline;
     text-decoration-color: white;
 }
@@ -98,6 +98,7 @@ section>.title-wrapper {
     justify-content: space-evenly;
     padding: 0px 16px 32px 16px;
     min-height: 52.4vh;
+    z-index: 1;
 }
 
 .content-list>ul {
@@ -214,6 +215,7 @@ section>.title-wrapper {
         right: 0px;
     }
 }
+
 .footer-wrapper {
     background-color: var(--primary-color);
 }
