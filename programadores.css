@@ -145,16 +145,17 @@ section>.title-wrapper {
     height: auto;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 120px);
-    column-gap: 10px;
-    row-gap: 10px;
-    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0px 8px;
 }
 .card {
+    flex-grow: 1;
     height: 120px;
     width: 120px;
-    padding-top: 8px;
+    padding: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,16 +170,16 @@ section>.title-wrapper {
     right: -440px;
     width: 400px;
     padding: 0px 16px;
-    bottom: 100px;
+    bottom: 20px;
     border-radius: 2em 0em 0em 2em;
     height: auto;
     box-shadow: -5px 5px 10px 2px rgba(0,0,0,.4);
     z-index: 3;
     background-color: white;
     animation-name: slide-left;
-    animation-duration: 2s;
-    animation-delay: 60s;
-    animation-duration: normal;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-direction: normal;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
@@ -213,6 +214,41 @@ section>.title-wrapper {
     100% {
         right: 0px;
     }
+}
+.references {
+    height: auto;
+    padding: 16px;
+}
+.references a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.references a:active {
+    color: var(--third-color);
+}
+.references-title {
+    display: inline-flex;
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    gap: 16px;
+    background-color: white;
+    user-select: none;
+    padding: 8px 12px;
+}
+.references-title:hover {
+    background-color: #e6e6e6;
+}
+.references-title:active {
+    background-color: #d9d9d9;
+}
+.references-title>img {
+    width: 24px;
+}
+.references-content {
+    display: none;
 }
 .footer-wrapper {
     background-color: var(--primary-color);
