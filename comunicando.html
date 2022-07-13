@@ -8,11 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Producto</title>
-    <link rel="stylesheet" href="disenadores-graficos.css">
+    <link rel="stylesheet" href="comunicando.css">
 </head>
 <body>
     <header>
         <div class="header">
+            <div class="menu-icon">
+                <img id="menuIconOpen" src="https://i.postimg.cc/XNCWvFnG/menu.png" alt="" onclick="menuMobAnimation()">
+                <!-- Removal Link: https://postimg.cc/delete/1dpSVBrv/f207f193 -->
+                <img id="menuIconClose" src="https://i.postimg.cc/VkKW35SD/menu-close.png" alt="" onclick="menuMobAnimation()">
+                <!-- Removal Link: https://postimg.cc/delete/z6ck5KMN/0ce4117c -->
+            </div>
             <div class="header-content">
                 <div class="page-title">
                     <h1>Título</h1>
@@ -20,11 +26,11 @@
                 <nav class="navigation">
                     <ul class="nav-list">
                         <li class="nav-element"><a href="/index.html">Inicio</a></li>
-                        <li class="nav-element"><p>Puntos de Vista*</p>
+                        <li class="nav-element"><p>Recomendaciones</p>
                             <ul>
-                                <li><a href="/programadores.html">Programadores</a></li>
-                                <li><a href="/disenadores-graficos.html">Diseñadores Gráficos</a></li>
-                                <li><a href="/comunicadores.html">Comunicadores</a></li>
+                                <li><a href="/programando.html">Programando</a></li>
+                                <li><a href="/disenando.html">Diseñando</a></li>
+                                <li><a href="/comunicando.html">Comunicando</a></li>
                             </ul>
                         </li>
                         <li class="nav-element"><a href="recomendaciones-finales.html">Recomendaciones Finales</a></li>
@@ -33,86 +39,91 @@
             </div>
         </div>
     </header>
+    <div class="menu-mob" id="menuMob">
+        <div class="menu-mob-content">
+            <li class="mob-element"><a href="/index.html">Inicio</a></li>
+            <li class="mob-element"><p>Recomendaciones/p></li>
+            <li class="mob-info"><a href="/programando.html">Programando</a></li>
+            <li class="mob-info"><a href="/disenando.html">Diseñando</a></li>
+            <li class="mob-info"><a href="/comunicando.html">Comunicando</a></li>
+            <li class="mob-element"><a href="recomendaciones-finales.html">Recomendaciones Finales</a></li>
+        </div>
+    </div>
     <section>
         <div class="title-wrapper">
-            <h1 class="title">Lorem Ipsum Dolor</h1>
+            <h1 class="title">Comunicando</h1>
         </div>
     </section>
     <section>
         <div class="content-wrapper">
             <div class="content-list">
                 <ul>
-                    <li><button id="l1" onclick="displayInfo(1)">L1</button></li>
-                    <li><button id="l2" onclick="displayInfo(2)">L2</button></li>
-                    <li><button id="l3" onclick="displayInfo(3)">L3</button></li>
-                    <li><button id="l4" onclick="displayInfo(4)">L4</button></li>
-                    <li><button id="l5" onclick="displayInfo(5)">L5</button></li>
-                    <li><button id="l6" onclick="displayInfo(6)">L6</button></li>
-                    <li><button id="l7" onclick="displayInfo(7)">L7</button></li>
-                    <li><button id="l8" onclick="displayInfo(8)">L8</button></li>
+                    <li><button id="l1" onclick="displayInfo(1)">Organización de la Información</button></li>
+                    <li><button id="l2" onclick="displayInfo(2)">Llamadas a la acción</button></li>
+                    <li><button id="l3" onclick="displayInfo(3)">Buscador interno</button></li>
+                    <li><button id="l4" onclick="displayInfo(4)">Posicionamiento</button></li>
+                    <li><button id="l5" onclick="displayInfo(5)">Contenido de calidad</button></li>
+                    <li><button id="l6" onclick="displayInfo(6)">Redes Sociales</button></li>
+                    <li><button id="l7" onclick="displayInfo(7)">Blog</button></li>
+                    <li><button id="l8" onclick="displayInfo(8)">Contacto con el cliente</button></li>
                 </ul>
             </div>
             <div class="content-wrapper2">
                 <div id="c1">
                     <div class="content">
-                        <h1 class="content-element">c1</h1>
-                        <p class="content-element">Description</p>
+                        <h1 class="content-element">Organización de la Información</h1>
+                        <p class="content-element">La información debe presentar una organización clara, y debe contener enlaces hacia otras páginas web para lograr que el usuario sepa dónde puede buscar lo que necesita.</p>
                         <div class="content-grid content-element">
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://cdn.pixabay.com/photo/2016/03/21/23/25/link-1271843_1280.png" alt="">
+                                <p>Todas las páginas deben tener atajos o enlaces a otras páginas para seguir navegando. Permitirán que el usuario llegue rápido a la información que necesite. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://cdn.pixabay.com/photo/2014/04/02/10/13/menu-303121_1280.png" alt="">
+                                <p>La estructura del sitio web debe estar visible en una barra de navegación o un menú. Debe contener todos los productos y servicios para que el usuario pueda acceder a ellos fácilmente. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://i.postimg.cc/zDpBBbzm/banner.png" alt="">
+                                <p>Los banners pueden ser usados para mostrar la información en gráficos y textos. Debido a que estos son movilizados utilizando animaciones, generarán otra impresión en el usuario. </p>
+                                <!-- https://postimg.cc/delete/LWQXZkTn/bb94e653 -->
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://i.postimg.cc/yxWzWNjB/header.png" alt="">
+                                <p>El encabezado debe contener botones de inicio, información y testimonios. Debe estar en la parte superior para que siempre esté visible. </p>
+                                <!-- https://postimg.cc/delete/dbZKCCsy/c6199a8a -->
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://images.pexels.com/photos/267669/pexels-photo-267669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                <p>La información debe presentar un lenguaje amigable y su terminología no debe ser complicada para asegurar la comprensión más usuarios. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://cdn.pixabay.com/photo/2016/11/13/04/52/statistic-1820320_1280.png" alt="">
+                                <p>Se pueden colocar partes en la web que llamen bastante la atención. El usuario no debe aburrirse en una página, debe encontrar un balance entre la información y las imágenes. Lo importante es centralizar lo que uno quiere mostrar. </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="c2">
                     <div class="content">
-                        <h1 class="content-element">c2</h1>
-                        <p class="content-element">Description</p>
+                        <h1 class="content-element">Llamadas a la acción</h1>
+                        <p class="content-element">Las llamadas a la acción están muy relacionado con todas las acciones que uno puede implementar en un sitio web para que el usuario realice alguna acción favorable.</p>
                         <div class="content-grid content-element">
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://images.pexels.com/photos/5650026/pexels-photo-5650026.jpeg" alt="">
+                                <p> “Regístrate gratis”, “Plan gratuito”, “Un mes gratis”, “Promociones”, “Ofertas”, “Últimos diez suscriptores”, “50% de descuento para los primeros diez suscriptores”, son algunas de las frases que utilizan empresas de marketing. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                <p>De esta manera, los usuarios podrán actuar de una forma rápida. Por ello se le conoce como llamada a la acción, para incitar al usuario a actuar.</p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://images.pexels.com/photos/3769747/pexels-photo-3769747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                <p>Las llamadas a la acción llaman mucho la atención, sobre todo en el caso de empresas, pues son percibidas rápidamente por los usuarios. De esta manera, uno llama con interés a sus usuarios. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
-                            </div>
-                            <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
-                            </div>
-                            <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://i.postimg.cc/zDpBBbzm/banner.png" alt="">
+                                <p>Los pequeños pop-ups que no sean invasivos, o banners que contengan tags o notas informativas útiles para el cliente, son muy llamativos y se pueden usar para vender. </p>
+                                <!-- https://postimg.cc/delete/LWQXZkTn/bb94e653 -->
                             </div>
                         </div>
                     </div>
@@ -319,10 +330,21 @@
             <!-- Removal link: https://postimg.cc/delete/V3Zw2tDP/1e500b4f -->
         </div>
         <div class="references-content" id="referencesCont">
-            <h3>Fuentes de Información:</h3>
-            <p>Hi<i>Hi</i><a href="">Hi</a>.</p>
-            <h3>Imágenes:</h3>
-            <p>Hi<i>Hi</i><a href="">Hi</a>.</p>
+        <h3>Fuentes de la Información:</h3>
+        <p>Las siguientes personas brindaron recomendaciones mediante la comunicación personal:</p>
+        <ul>
+            <li>Marlene R.</li>
+            <li>Freddy S.</li>
+            <li>Patricia P.</li>
+            <li>Alejandro S.</li>
+            <li>Leysi F.</li>
+            <li>Gerardo C.</li>
+            <li>Austin A.</li>
+            <li>Nicol C.</li>
+            <li>Mario R.</li>
+        </ul>
+        <h3>Imágenes:</h3>
+        <p>Las imágenes provienen de <a href="https://www.pexels.com/">Pexels</a> y <a href="https://pixabay.com/">Pixabay</a>, plataformas que ofrecen imágenes sin derechos de uso.</p>
         </div>
     </section>
     <div class="banner" id="banner">
@@ -340,6 +362,6 @@
             </div>
         </div>
     </footer>
-    <script src="disenadores-graficos.js"></script>
+    <script src="comunicando.js"></script>
 </body>
 </html>

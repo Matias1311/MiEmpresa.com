@@ -13,6 +13,12 @@
 <body>
     <header>
         <div class="header">
+            <div class="menu-icon">
+                <img id="menuIconOpen" src="https://i.postimg.cc/XNCWvFnG/menu.png" alt="" onclick="menuMobAnimation()">
+                <!-- Removal Link: https://postimg.cc/delete/1dpSVBrv/f207f193 -->
+                <img id="menuIconClose" src="https://i.postimg.cc/VkKW35SD/menu-close.png" alt="" onclick="menuMobAnimation()">
+                <!-- Removal Link: https://postimg.cc/delete/z6ck5KMN/0ce4117c -->
+            </div>
             <div class="header-content">
                 <div class="page-title">
                     <h1>Título</h1>
@@ -20,11 +26,11 @@
                 <nav class="navigation">
                     <ul class="nav-list">
                         <li class="nav-element"><a href="/index.html">Inicio</a></li>
-                        <li class="nav-element"><p>Puntos de Vista*</p>
+                        <li class="nav-element"><p>Recomendaciones</p>
                             <ul>
-                                <li><a href="/programadores.html">Programadores</a></li>
-                                <li><a href="/disenadores-graficos.html">Diseñadores Gráficos</a></li>
-                                <li><a href="/comunicadores.html">Comunicadores</a></li>
+                                <li><a href="/programando.html">Programando</a></li>
+                                <li><a href="/disenando.html">Diseñando</a></li>
+                                <li><a href="/comunicando.html">Comunicando</a></li>
                             </ul>
                         </li>
                         <li class="nav-element"><a href="recomendaciones-finales.html">Recomendaciones Finales</a></li>
@@ -33,28 +39,37 @@
             </div>
         </div>
     </header>
-    <div class="title">
-        <img src="https://wellaggio.com/wp-content/uploads/2018/01/Wellaggio-diseno-web-valencia-Co%CC%81mo-seducir-a-tus-clientes-con-tu-pa%CC%81gina-web.jpg" alt="">
-        <div class="title-img-desc">Img description, img img img img img.</div>
-        <div class="title-txt-cont">
-            <h1 class="title-txt">MiEmpresa.com</h1>
-            <p class="title-desc">Breve descripción y objetivo del producto</p>
+    <div class="menu-mob" id="menuMob">
+        <div class="menu-mob-content">
+            <li class="mob-element"><a href="/index.html">Inicio</a></li>
+            <li class="mob-element"><p>Puntos de Vista*</p></li>
+            <li class="mob-info"><a href="/programando.html">Programando</a></li>
+            <li class="mob-info"><a href="/disenando.html">Diseñando</a></li>
+            <li class="mob-info"><a href="/comunicando.html">Comunicando</a></li>
+            <li class="mob-element"><a href="recomendaciones-finales.html">Recomendaciones Finales</a></li>
         </div>
     </div>
+    <div class="title">
+        <img src="https://wellaggio.com/wp-content/uploads/2018/01/Wellaggio-diseno-web-valencia-Co%CC%81mo-seducir-a-tus-clientes-con-tu-pa%CC%81gina-web.jpg" alt="">
+        <div class="title-txt-cont">
+            <h1 class="title-txt">MiEmpresa.com</h1>
+            <p class="title-desc">Brindamos recomendaciones para elaborar sitios web de los tres profesionales más influyentes en este proceso: Programadores, Diseñadores Gráficos, y Comunicadores.</p>
+        </div>
+        </div>
     <section class="info">
-        <h1>¡Encuentra los siguientes puntos de vista para ayudarte con tu sitio web!*</h1>
+        <h1>¡Encuentre las siguientes recomendaciones para ayudarlo con su sitio web!</h1>
         <div class="card-wrapper">
             <a class="card" href="/programadores.html">
                 <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="" class="card-element">
-                <h2 class="card-element">Programadores</h2>
+                <h2 class="card-element">Programando</h2>
             </a>
             <a class="card" href="/disenadores-graficos.html">
                 <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="" class="card-element">
-                <h2 class="card-element">Diseñadores Gráficos</h2>
+                <h2 class="card-element">Diseñando</h2>
             </a>
             <a class="card" href="/comunicadores.html">
                 <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="" class="card-element">
-                <h2 class="card-element">Comunicadores</h2>
+                <h2 class="card-element">Comunicando</h2>
             </a>
         </div>
     </section>
@@ -65,10 +80,21 @@
             <!-- Removal link: https://postimg.cc/delete/V3Zw2tDP/1e500b4f -->
         </div>
         <div class="references-content" id="referencesCont">
-            <h3>Fuentes de Información:</h3>
-            <p>Hi<i>Hi</i><a href="">Hi</a>.</p>
-            <h3>Imágenes:</h3>
-            <p>Hi<i>Hi</i><a href="">Hi</a>.</p>
+        <h3>Fuentes de la Información:</h3>
+        <p>Las siguientes personas brindaron recomendaciones mediante la comunicación personal:</p>
+        <ul>
+            <li>Marlene R.</li>
+            <li>Freddy S.</li>
+            <li>Patricia P.</li>
+            <li>Alejandro S.</li>
+            <li>Leysi F.</li>
+            <li>Gerardo C.</li>
+            <li>Austin A.</li>
+            <li>Nicol C.</li>
+            <li>Mario R.</li>
+        </ul>
+        <h3>Imágenes:</h3>
+        <p>Las imágenes provienen de <a href="https://www.pexels.com/">Pexels</a> y <a href="https://pixabay.com/">Pixabay</a>, plataformas que ofrecen imágenes sin derechos de uso.</p>
         </div>
     </section>
     <div class="banner" id="banner">

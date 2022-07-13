@@ -55,3 +55,25 @@ function expandReferences () {
     referencesAreExpanded = !referencesAreExpanded;
 }
 displayInfo(1);
+var menuIsExpanded = true;
+function menuMobAnimation () {
+    if (menuIsExpanded) {
+        menuMob.classList.remove("menu-mob-out");
+        menuMob.classList.add("menu-mob-in");
+        menuIconOpen.classList.remove("menu-icon-open-out");
+        menuIconOpen.classList.add("menu-icon-open-in");
+        menuIconClose.classList.remove("menu-icon-close-out");
+        menuIconClose.classList.add("menu-icon-close-in");
+    }
+    else {
+        menuMob.classList.remove("menu-mob-in");
+        menuMob.classList.add("menu-mob-out")
+        menuIconClose.classList.remove("menu-icon-close-in");
+        menuIconClose.classList.add("menu-icon-close-out");
+        setTimeout (function () {
+            menuIconOpen.classList.remove("menu-icon-open-in");
+            menuIconOpen.classList.add("menu-icon-open-out");
+        }, 500)
+    }
+    menuIsExpanded = !menuIsExpanded;
+}

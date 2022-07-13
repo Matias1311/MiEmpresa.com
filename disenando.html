@@ -8,11 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Producto</title>
-    <link rel="stylesheet" href="programadores.css">
+    <link rel="stylesheet" href="disenando.css">
 </head>
 <body>
     <header>
         <div class="header">
+            <div class="menu-icon">
+                <img id="menuIconOpen" src="https://i.postimg.cc/XNCWvFnG/menu.png" alt="" onclick="menuMobAnimation()">
+                <!-- Removal Link: https://postimg.cc/delete/1dpSVBrv/f207f193 -->
+                <img id="menuIconClose" src="https://i.postimg.cc/VkKW35SD/menu-close.png" alt="" onclick="menuMobAnimation()">
+                <!-- Removal Link: https://postimg.cc/delete/z6ck5KMN/0ce4117c -->
+            </div>
             <div class="header-content">
                 <div class="page-title">
                     <h1>Título</h1>
@@ -20,11 +26,11 @@
                 <nav class="navigation">
                     <ul class="nav-list">
                         <li class="nav-element"><a href="/index.html">Inicio</a></li>
-                        <li class="nav-element"><p>Puntos de Vista*</p>
+                        <li class="nav-element"><p>Recomendaciones</p>
                             <ul>
-                                <li><a href="/programadores.html">Programadores</a></li>
-                                <li><a href="/disenadores-graficos.html">Diseñadores Gráficos</a></li>
-                                <li><a href="/comunicadores.html">Comunicadores</a></li>
+                                <li><a href="/programando.html">Programando</a></li>
+                                <li><a href="/disenando.html">Diseñando</a></li>
+                                <li><a href="/comunicando.html">Comunicando</a></li>
                             </ul>
                         </li>
                         <li class="nav-element"><a href="recomendaciones-finales.html">Recomendaciones Finales</a></li>
@@ -33,86 +39,104 @@
             </div>
         </div>
     </header>
+    <div class="menu-mob" id="menuMob">
+        <div class="menu-mob-content">
+            <li class="mob-element"><a href="/index.html">Inicio</a></li>
+            <li class="mob-element"><p>Puntos de Vista*</p></li>
+            <li class="mob-info"><a href="/programando.html">Programadores</a></li>
+            <li class="mob-info"><a href="/disenando.html">Diseñadores Gráficos</a></li>
+            <li class="mob-info"><a href="/comunicando.html">Comunicadores</a></li>
+            <li class="mob-element"><a href="recomendaciones-finales.html">Recomendaciones Finales</a></li>
+        </div>
+    </div>
     <section>
         <div class="title-wrapper">
-            <h1 class="title">Lorem Ipsum Dolor</h1>
+            <h1 class="title">Diseñando</h1>
         </div>
     </section>
     <section>
         <div class="content-wrapper">
             <div class="content-list">
                 <ul>
-                    <li><button id="l1" onclick="displayInfo(1)">L1</button></li>
-                    <li><button id="l2" onclick="displayInfo(2)">L2</button></li>
-                    <li><button id="l3" onclick="displayInfo(3)">L3</button></li>
-                    <li><button id="l4" onclick="displayInfo(4)">L4</button></li>
-                    <li><button id="l5" onclick="displayInfo(5)">L5</button></li>
-                    <li><button id="l6" onclick="displayInfo(6)">L6</button></li>
-                    <li><button id="l7" onclick="displayInfo(7)">L7</button></li>
-                    <li><button id="l8" onclick="displayInfo(8)">L8</button></li>
+                    <li><button id="l1" onclick="displayInfo(1)">Diseño Simple</button></li>
+                    <li><button id="l2" onclick="displayInfo(2)">Navegación Sencilla e Intuitiva</button></li>
+                    <li><button id="l3" onclick="displayInfo(3)">Colores</button></li>
+                    <li><button id="l4" onclick="displayInfo(4)">Diseño Responsivo</button></li>
+                    <li><button id="l5" onclick="displayInfo(5)">Tipografía</button></li>
+                    <li><button id="l6" onclick="displayInfo(6)">Imágenes y Videos</button></li>
+                    <li><button id="l7" onclick="displayInfo(7)">Elementos Gráficos</button></li>
+                    <li><button id="l8" onclick="displayInfo(8)">Fotografías Profesionales</button></li>
+                    <li><button id="l8" onclick="displayInfo(9)">Catálogos Digitales</button></li>
                 </ul>
             </div>
             <div class="content-wrapper2">
                 <div id="c1">
                     <div class="content">
-                        <h1 class="content-element">c1</h1>
+                        <h1 class="content-element">Diseño Simple</h1>
                         <p class="content-element">Description</p>
                         <div class="content-grid content-element">
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://cdn.pixabay.com/photo/2015/11/10/14/26/box-1036976_1280.png" alt="">
+                                <p>Debe ser lo más simple posible, lo que debe venderse es el producto, pero no el diseño. Las páginas no son para que los diseñadores se luzcan.</p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://images.pexels.com/photos/5428829/pexels-photo-5428829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                <p>En algunas páginas la navegación es muy complicada, ya que el diseño es bueno pero las personas no lo usarían por no tener conocimientos de web. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://images.pexels.com/photos/5797903/pexels-photo-5797903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                <p>Las páginas deben ser doblemente amigables, porque en las personas mayores hay muy poca educación digital. Puede haber un proceso de alfabetización, ya que inicialmente las personas le tienen un poco de miedo a los sitios web. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://i.postimg.cc/mDh7KN2B/styles.png" alt="">
+                                <p>Si de pronto hay una sección con diferente estilo el usuario no entiende qué pasó, se puede distraer e irse del sitio web. Esto es la identidad de un sitio web, debe tomarse en cuenta. </p>
+                                <!-- https://postimg.cc/delete/wSRhz4FN/9c5ebcdc -->
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
-                            </div>
-                            <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://i.postimg.cc/g00nSzNZ/space.png https://postimg.cc/delete/XtrpTG71/64922f7b" alt="">
+                                <p>Respetar los espacios, que no sea muy recargado. Esto afecta mucho la estética del sitio web.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="c2">
                     <div class="content">
-                        <h1 class="content-element">c2</h1>
-                        <p class="content-element">Description</p>
+                        <h1 class="content-element">Navegación Sencilla e Intuitiva</h1>
+                        <p class="content-element">El usuario al ingresar a una página no debe perderse en el intento. Tiene que ser intuitivo y llegar fácil a donde el usuario necesite. Siempre se debe poner el producto primero, y resaltarlo más que la información de la empresa.</p>
                         <div class="content-grid content-element">
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://cdn.pixabay.com/photo/2016/09/08/17/46/user-interface-1655006_1280.png" alt="">
+                                <p>Hay dos puntos: la experiencia de usuario y el diseño de interfaces. Lo que necesita la gente para poder llegar a comprar, revisar, reenviar, compartir, está relacionado a que gráficamente sea cómodo. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                <p>Para que sea lógico se indica mucho análisis, pruebas, y pensamiento. El cómo hacer que una página sea intuitiva para el usuario se basa en analítica. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://images.pexels.com/photos/6319018/pexels-photo-6319018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                <p>El usuario es muy exigente en estos tiempos, así que el resolver la experiencia de usuario con un buen diseño de interfaces hace que una página pueda llegar a un objetivo bueno, fácil de llegar y que sea exitoso. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://i.postimg.cc/4xXFKqxd/simple.png" alt="">
+                                <p>Es ideal no darle muchos detalles a la página. Mientras la información sea concreta y directa, la navegación puede ser sencilla y amigable.</p>
+                                <!-- https://postimg.cc/delete/YZCy1kbz/eb0ab54a -->
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://cdn.pixabay.com/photo/2012/04/05/02/02/cursor-25900_1280.png" alt="">
+                                <p>Está comprobado que si un usuario, con solo tres clics, obtenga lo que necesite, entonces es un buen sitio web. Todo depende de la necesidad de una empresa, ya que para vender pueden ser necesarios más de 3 clics. </p>
                             </div>
                             <div class="card">
-                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
-                                <p>Img description</p>
+                                <img src="https://cdn.pixabay.com/photo/2017/05/14/03/45/gui-2311260_1280.png" alt="">
+                                <p>Una buena interfaz de usuario facilita a que el usuario encuentre lo que busca. Depende mucho del sitio web, pero debe ser accesible, la información debe ser encontrada de la manera más sencilla y rápida.</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://png.vector.me/files/images/2/0/205193/web_navigation_bars.jpg" alt="">
+                                <p>La barra de navegación debe ser lo más eficiente posible, puede ser atractiva y sobresaliente. Debe ser útil para navegar, lo ideal es que toma ¼ de página.</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://i.postimg.cc/HkxXh1YF/buttons.png" alt="">
+                                <p>Los botones deben ser realmente claros, y deben ser ubicados con facilidad. Esto garantiza que el usuario note que es de verdad un botón.</p>
+                                <!--  https://postimg.cc/delete/h6JVWPsj/1a0c2f01 -->
                             </div>
                         </div>
                     </div>
@@ -309,6 +333,38 @@
                         </div>
                     </div>
                 </div>
+                <div id="c9">
+                    <div class="content">
+                        <h1 class="content-element">c9</h1>
+                        <p class="content-element">Description</p>
+                        <div class="content-grid content-element">
+                            <div class="card">
+                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
+                                <p>Img description</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
+                                <p>Img description</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
+                                <p>Img description</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
+                                <p>Img description</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
+                                <p>Img description</p>
+                            </div>
+                            <div class="card">
+                                <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="">
+                                <p>Img description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -319,10 +375,21 @@
             <!-- Removal link: https://postimg.cc/delete/V3Zw2tDP/1e500b4f -->
         </div>
         <div class="references-content" id="referencesCont">
-            <h3>Fuentes de Información:</h3>
-            <p>Hi<i>Hi</i><a href="">Hi</a>.</p>
-            <h3>Imágenes:</h3>
-            <p>Hi<i>Hi</i><a href="">Hi</a>.</p>
+        <h3>Fuentes de la Información:</h3>
+        <p>Las siguientes personas brindaron recomendaciones mediante la comunicación personal:</p>
+        <ul>
+            <li>Marlene R.</li>
+            <li>Freddy S.</li>
+            <li>Patricia P.</li>
+            <li>Alejandro S.</li>
+            <li>Leysi F.</li>
+            <li>Gerardo C.</li>
+            <li>Austin A.</li>
+            <li>Nicol C.</li>
+            <li>Mario R.</li>
+        </ul>
+        <h3>Imágenes:</h3>
+        <p>Las imágenes provienen de <a href="https://www.pexels.com/">Pexels</a> y <a href="https://pixabay.com/">Pixabay</a>, plataformas que ofrecen imágenes sin derechos de uso.</p>
         </div>
     </section>
     <div class="banner" id="banner">
@@ -340,6 +407,6 @@
             </div>
         </div>
     </footer>
-    <script src="programadores.js"></script>
+    <script src="disenando.js"></script>
 </body>
 </html>

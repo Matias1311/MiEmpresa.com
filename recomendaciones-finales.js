@@ -4,9 +4,6 @@ function displayInfo (number) {
     c3.style.display = "none";
     c4.style.display = "none";
     c5.style.display = "none";
-    c6.style.display = "none";
-    c7.style.display = "none";
-    c8.style.display = "none";
 
     switch (number) {
         case 1:
@@ -23,15 +20,6 @@ function displayInfo (number) {
             break;
         case 5:
             c5.style.display = "block";
-            break;
-        case 6:
-            c6.style.display = "block";
-            break;
-        case 7:
-            c7.style.display = "block";
-            break;
-        case 8:
-            c8.style.display = "block";
             break;
         default:
             console.log("ERROR: INVALID SWITCH ARGUMENT");
@@ -55,3 +43,25 @@ function expandReferences () {
     referencesAreExpanded = !referencesAreExpanded;
 }
 displayInfo(1);
+var menuIsExpanded = true;
+function menuMobAnimation () {
+    if (menuIsExpanded) {
+        menuMob.classList.remove("menu-mob-out");
+        menuMob.classList.add("menu-mob-in");
+        menuIconOpen.classList.remove("menu-icon-open-out");
+        menuIconOpen.classList.add("menu-icon-open-in");
+        menuIconClose.classList.remove("menu-icon-close-out");
+        menuIconClose.classList.add("menu-icon-close-in");
+    }
+    else {
+        menuMob.classList.remove("menu-mob-in");
+        menuMob.classList.add("menu-mob-out")
+        menuIconClose.classList.remove("menu-icon-close-in");
+        menuIconClose.classList.add("menu-icon-close-out");
+        setTimeout (function () {
+            menuIconOpen.classList.remove("menu-icon-open-in");
+            menuIconOpen.classList.add("menu-icon-open-out");
+        }, 500)
+    }
+    menuIsExpanded = !menuIsExpanded;
+}
