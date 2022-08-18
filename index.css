@@ -97,6 +97,7 @@ body {
     padding: 16px;
     border-radius: 1em;
     box-shadow: 3px 3px 2px 2px rgba(0,0,0,.4);
+    -webkit-box-shadow: 3px 3px 2px 2px rgba(0,0,0,.4);
 }
 .mob-info {
     padding-left: 32px;
@@ -266,6 +267,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     box-shadow: 5px 5px 10px 2px rgba(0,0,0,.4);
+    -webkit-box-shadow: 5px 5px 10px 2px rgba(0,0,0,.4);
     border-radius: 2em;
     width: 100%;
 }
@@ -282,7 +284,10 @@ body {
 }
 .card>img {
     margin: 16px 0px;
-    width: 80px;
+    width: 70%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2em;
 }
 .banner {
     position: fixed;
@@ -295,6 +300,7 @@ body {
     border-radius: 2em 0em 0em 2em;
     height: auto;
     box-shadow: -5px 5px 10px 2px rgba(0,0,0,.4);
+    -webkit-box-shadow: -5px 5px 10px 2px rgba(0,0,0,.4);
     z-index: 3;
     background-color: white;
     animation-name: slide-left;
@@ -396,6 +402,12 @@ body {
     .card {
         height: 160px;
         margin-top: 16px;
+    }
+    .card>img {
+        height: 100px;
+        margin: 0;
+        padding-top: 24px;
+        width: 75%;
     }
     .menu-mob-content {
         padding: 40px 16px;

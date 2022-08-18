@@ -53,7 +53,7 @@ body {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     border-right: 2px solid black;
-    z-index: 2;
+    z-index: 5;
     left: calc(-100vw - 2px);
     animation-duration: 1s;
     animation-direction: normal;
@@ -98,6 +98,7 @@ body {
     padding: 16px;
     border-radius: 1em;
     box-shadow: 3px 3px 2px 2px rgba(0,0,0,.4);
+    -webkit-box-shadow: 3px 3px 2px 2px rgba(0,0,0,.4);
 }
 .mob-info {
     padding-left: 32px;
@@ -246,7 +247,8 @@ section>.title-wrapper {
     top: 80px;
     border-radius: 2em;
     box-shadow: 5px 5px 10px 2px rgba(0,0,0,.4);
-    width: 80vw;
+    -webkit-box-shadow: 5px 5px 10px 2px rgba(0,0,0,.4);
+    width: 96vw;
 }
 .content-list>ul {
     display: inline-flex;
@@ -275,9 +277,6 @@ section>.title-wrapper {
 }
 .content-wrapper2 {
     height: auto;
-    width: 80vw;
-    border-radius: 2em;
-    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.4);
 }
 #c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8 {
     height: auto;
@@ -288,9 +287,8 @@ section>.title-wrapper {
     flex-direction: column;
     align-items: center;
     height: auto;
-    width: 98%;
+    width: 100%;
     align-self: center;
-    margin: 8px;
 }
 .content-element {
     padding: 4px 0px;
@@ -308,19 +306,21 @@ section>.title-wrapper {
     flex-grow: 1;
     height: auto;
     width: 240px;
+    max-width: 50%;
     padding: 8px;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
-.card>img {
+.card img {
     min-height: 100px;
     max-height: 140px;
     width: 100%;
     max-width: max-content;
     margin-bottom: 8px;
     object-fit: cover;
+    border-radius: 2em;
 }
 .card>p {
     font-size: 13px;
@@ -329,6 +329,64 @@ section>.title-wrapper {
 .card:nth-child(4)>img {
     object-fit: scale-down;
 }
+.less-br {
+    border-radius: 0.5em !important;
+}
+
+.demo {
+    min-height: 100px;
+    max-height: 140px;
+    margin-bottom: 8px;
+    width: 75%;
+}
+#border-demo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#border-demo div {
+    box-shadow: 0px 5px 40px 2px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0px 5px 40px 2px rgba(0,0,0,.4);
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+}
+#border-demo div:nth-child(2) {
+    border-radius: 2em;
+}
+#background-demo {
+    background: rgb(113,113,113);
+    background: -moz-radial-gradient(circle, rgba(113,113,113,1) 0%, rgba(96,96,96,1) 24%, rgba(71,71,71,1) 52%, rgba(39,39,39,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(113,113,113,1) 0%, rgba(96,96,96,1) 24%, rgba(71,71,71,1) 52%, rgba(39,39,39,1) 100%);
+    background: radial-gradient(circle, rgba(113,113,113,1) 0%, rgba(96,96,96,1) 24%, rgba(71,71,71,1) 52%, rgba(39,39,39,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#717171",endColorstr="#272727",GradientType=1);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 2em;
+}
+#background-demo>div {
+    background-color: rgba(255,255,255,.8);
+    border: 2px dashed rgba(0,0,0,.8);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    font-weight: light;
+    user-select: none;
+}
+#image-sizes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .banner {
     position: fixed;
     display: block;
@@ -340,6 +398,7 @@ section>.title-wrapper {
     border-radius: 2em 0em 0em 2em;
     height: auto;
     box-shadow: -5px 5px 10px 2px rgba(0,0,0,.4);
+    -webkit-box-shadow: -5px 5px 10px 2px rgba(0,0,0,.4);
     z-index: 5;
     background-color: white;
     animation-name: slide-left;
@@ -384,7 +443,6 @@ section>.title-wrapper {
 .references {
     height: auto;
     padding: 16px;
-    margin-bottom: 80px;
 }
 .references a {
     color: var(--primary-color);
@@ -418,8 +476,6 @@ section>.title-wrapper {
     display: none;
 }
 footer {
-    position: fixed;
-    bottom: 0px;
     width: 100vw;
     height: 80px;
 }
