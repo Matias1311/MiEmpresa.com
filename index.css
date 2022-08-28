@@ -384,10 +384,10 @@ body {
     z-index: 1 !important;
     margin-bottom: 72px;
 }
-#demoContent>div:nth-child(1) {
+#simg {
     border: 2px dashed grey;
     position: absolute;
-    width: 100%;
+    width: calc(100% - 4px);
     height: 128px;
     top: 8px;
     text-align: left;
@@ -404,10 +404,13 @@ body {
     bottom: 8px;
     left: 8px;
     cursor: pointer;
-    z-index: 2;
 }
-#demoContent>div:nth-child(2) {
-    margin-top: calc(140px + 4px);
+#info {
+    margin-top: calc(70px + 4px);
+    z-index: 3;
+}
+#products {
+    margin-top: 16px;
 }
 #demoContent>div:nth-child(1) div {
     display: inline-flex;
@@ -415,10 +418,10 @@ body {
 }
 #demoContent>div>div:nth-child(2) {
     display: inline-flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     width: 60vw;
+    z-index: 3;
 }
 #demoContent div div div {
     padding: 16px;
@@ -487,12 +490,35 @@ body {
     right: 0;
 }
 #content {
+    padding: 0px 8px;
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    width: 36vw;
     height: 8vh;
     box-shadow: 5px 10px 15px 2px rgba(0,0,0,.4);
     background-color: white;
+}
+#timeSlider {
+    width: 80vw;
+    padding: 8px 16px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.4);
+    border-radius: 2em;
+    margin: 8px auto;
+}
+#timeInputContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#timeInput {
+    border: solid 1px var(--secondary-color);
+    border-radius: 8px;
+    height: 7px;
+    width: 356px;
+    outline: none;
+    transition: 450ms ease-in;
+    -webkit-appearance: none;
 }
 
 .banner {
@@ -667,7 +693,7 @@ body {
     #fakeMenuIcon {
         display: block;
         position: absolute;
-        top: 25px;
+        top: 42px;
         left: 25px;
     }
     #logo {
@@ -684,6 +710,9 @@ body {
     #contact img {
         width: 24px;
         margin: 8px 4px;
+    }
+    #products {
+        margin-top: 24px;
     }
     #products>div {
         flex-direction: column !important;

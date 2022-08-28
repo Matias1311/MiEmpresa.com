@@ -22,7 +22,7 @@ function displayInfo (number) {
         case 1:
             c1.style.display = "block";
             l1.style.backgroundColor = "var(--secondary-color)";
-        break;
+            break;
         case 2:
             c2.style.display = "block";
             l2.style.backgroundColor = "var(--secondary-color)";
@@ -56,7 +56,7 @@ function displayInfo (number) {
             l9.style.backgroundColor = "var(--secondary-color)";
             break;
         default:
-            console.log("ERROR: INVALID SWITCH ARGUMENT");
+            console.error("ERROR: INVALID SWITCH ARGUMENT");
             break;
     }
 }

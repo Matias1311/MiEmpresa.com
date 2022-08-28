@@ -267,10 +267,10 @@ section>.title-wrapper {
     padding: 0px 4px;
 }
 .content-list button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
 }
 .content-list button:active {
-    background-color: var(--third-color);
+    background-color: var(--third-color) !important;
 }
 .content-wrapper2>div {
     display: none;

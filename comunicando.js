@@ -7,14 +7,14 @@ function displayInfo (number) {
     c6.style.display = "none";
     c7.style.display = "none";
     c8.style.display = "none";
-    l1.style.display = "none";
-    l2.style.display = "none";
-    l3.style.display = "none";
-    l4.style.display = "none";
-    l5.style.display = "none";
-    l6.style.display = "none";
-    l7.style.display = "none";
-    l8.style.display = "none";
+    l1.style.backgroundColor = "var(--primary-color)";
+    l2.style.backgroundColor = "var(--primary-color)";
+    l3.style.backgroundColor = "var(--primary-color)";
+    l4.style.backgroundColor = "var(--primary-color)";
+    l5.style.backgroundColor = "var(--primary-color)";
+    l6.style.backgroundColor = "var(--primary-color)";
+    l7.style.backgroundColor = "var(--primary-color)";
+    l8.style.backgroundColor = "var(--primary-color)";
 
     switch (number) {
         case 1:

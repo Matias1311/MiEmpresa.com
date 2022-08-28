@@ -57,44 +57,44 @@ formChange("initial");
 
 var selectorInfo = {
     logo: {
-        title: "l",
-        p: ""
+        title: "Logo",
+        p: "Crea tu logo. "
     },
     headerContent: {
-        title: "",
-        p: ""
+        title: "Barra de Navegación",
+        p: "Debe ser simple y rápida. "
     },
     contact: {
-        title: "",
-        p: ""
+        title: "Información de Contacto",
+        p: "Asegura ventas y chatea. "
     },
     simg: {
-        title: "",
-        p: ""
+        title: "Imágenes",
+        p: "Llama la atención. "
     },
     info: {
-        title: "",
-        p: ""
+        title: "Información de tu Empresa",
+        p: "Haz que te conozcan. "
     },
     products: {
-        title: "",
-        p: ""
+        title: "Productos",
+        p: "Vende con texto e imágenes. "
     },
     sbimg: {
-        title: "",
-        p: ""
+        title: "Imágenes",
+        p: "Llama la atención. "
     },
     sbanner: {
-        title: "",
-        p: ""
+        title: "Banner",
+        p: "Haz que tus clientes actúen. "
     },
     demoFooter: {
-        title: "",
-        p: ""
+        title: "Pie de Página",
+        p: "Añade información. "
     }
 };
-const desktopClick = "<br>Haz clic de nuevo para obtener más información.";
-const mobileTouch = "<br>Pulsa de nuevo para obtener más información";
+const desktopClick = "Haz clic para ver.";
+const mobileTouch = "Pulsa para ver.";
 let selector = document.getElementById('selector');
 let arrow = document.getElementById('arrow');
 let selTitle = document.getElementById('selTitle');
@@ -102,46 +102,46 @@ let selP = document.getElementById('selP');
 var isHovering = false;
 var isInSelector = false;
 var currentInfo;
-let pageSpace = 10;
+let pageSpace = 16;
 let isMobile = false;
 const onMouseMove = (e) => {
     if (isHovering || isInSelector) {
         switch (currentInfo) {
             case "logo":
-                selTitle.innerHTML = selectorInfo.logo.title
-                selP.innerHTML = selectorInfo.logo.p
+                selTitle.innerHTML = selectorInfo.logo.title;
+                selP.innerHTML = selectorInfo.logo.p + desktopClick;
                 break;
             case "headerContent":
-                selTitle.innerHTML = selectorInfo.headerContent.title
-                selP.innerHTML = selectorInfo.headerContent.p
+                selTitle.innerHTML = selectorInfo.headerContent.title;
+                selP.innerHTML = selectorInfo.headerContent.p + desktopClick;
                 break;
             case "contact":
-                selTitle.innerHTML = selectorInfo.contact.title
-                selP.innerHTML = selectorInfo.contact.p
+                selTitle.innerHTML = selectorInfo.contact.title;
+                selP.innerHTML = selectorInfo.contact.p + desktopClick;
                 break;
             case "simg":
-                selTitle.innerHTML = selectorInfo.simg.title
-                selP.innerHTML = selectorInfo.simg.p
+                selTitle.innerHTML = selectorInfo.simg.title;
+                selP.innerHTML = selectorInfo.simg.p + desktopClick;
                 break;
             case "info":
-                selTitle.innerHTML = selectorInfo.info.title
-                selP.innerHTML = selectorInfo.info.p
+                selTitle.innerHTML = selectorInfo.info.title;
+                selP.innerHTML = selectorInfo.info.p + desktopClick;
                 break;
             case "products":
-                selTitle.innerHTML = selectorInfo.products.title
-                selP.innerHTML = selectorInfo.products.p
+                selTitle.innerHTML = selectorInfo.products.title;
+                selP.innerHTML = selectorInfo.products.p + desktopClick;
                 break;
             case "sbimg":
-                selTitle.innerHTML = selectorInfo.sbimg.title
-                selP.innerHTML = selectorInfo.sbimg.p
+                selTitle.innerHTML = selectorInfo.sbimg.title;
+                selP.innerHTML = selectorInfo.sbimg.p + desktopClick;
                 break;
             case "sbanner":
-                selTitle.innerHTML = selectorInfo.sbanner.title
-                selP.innerHTML = selectorInfo.sbanner.p
+                selTitle.innerHTML = selectorInfo.sbanner.title;
+                selP.innerHTML = selectorInfo.sbanner.p + desktopClick;
                 break;
             case "demoFooter":
-                selTitle.innerHTML = selectorInfo.demoFooter.title
-                selP.innerHTML = selectorInfo.demoFooter.p
+                selTitle.innerHTML = selectorInfo.demoFooter.title;
+                selP.innerHTML = selectorInfo.demoFooter.p + desktopClick;
                 break;
         }
         selector.style.animationDuration = "0.15s"
@@ -150,16 +150,20 @@ const onMouseMove = (e) => {
         selector.style.display = "block";
         if (arrow.getBoundingClientRect().left + (arrow.getBoundingClientRect().width / 2) + pageSpace < selector.getBoundingClientRect().width) {
             selector.style.transform = "scaleX(-1)";
+            selTitle.style.transform = "scaleX(-1)";
+            selP.style.transform = "scaleX(-1)"
         }
         else if (arrow.getBoundingClientRect().left + (arrow.getBoundingClientRect().width / 2) - pageSpace > selector.getBoundingClientRect().width){
             selector.style.transform = "scaleX(1)";
+            selTitle.style.transform = "scaleX(1)";
+            selP.style.transform = "scaleX(1)";
         }
         if (selector.style.transform == "scaleX(-1)") {
             selector.style.left = e.pageX + 'px';
             selector.style.top = 'calc(' + e.pageY + 'px - 8vh - 16px)';
         }
         if (selector.style.transform == "scaleX(1)" || selector.style.transform == "") {
-            selector.style.left = 'calc(' + e.pageX + 'px - 20vw)';
+            selector.style.left = 'calc(' + e.pageX + 'px - 36vw - 16px)';
             selector.style.top = 'calc(' + e.pageY + 'px - 8vh - 16px)';
         }
     }
@@ -185,40 +189,40 @@ const onTouch = (e) => {
     if (isHovering || isInSelector) {
         switch (currentInfo) {
             case "logo":
-                selTitle.innerHTML = selectorInfo.logo.title
-                selP.innerHTML = selectorInfo.logo.p
+                selTitle.innerHTML = selectorInfo.logo.title;
+                selP.innerHTML = selectorInfo.logo.p + mobileTouch;
                 break;
             case "headerContent":
-                selTitle.innerHTML = selectorInfo.headerContent.title
-                selP.innerHTML = selectorInfo.headerContent.p
+                selTitle.innerHTML = selectorInfo.headerContent.title;
+                selP.innerHTML = selectorInfo.headerContent.p + mobileTouch;
                 break;
             case "contact":
-                selTitle.innerHTML = selectorInfo.contact.title
-                selP.innerHTML = selectorInfo.contact.p
+                selTitle.innerHTML = selectorInfo.contact.title;
+                selP.innerHTML = selectorInfo.contact.p + mobileTouch;
                 break;
             case "simg":
-                selTitle.innerHTML = selectorInfo.simg.title
-                selP.innerHTML = selectorInfo.simg.p
+                selTitle.innerHTML = selectorInfo.simg.title;
+                selP.innerHTML = selectorInfo.simg.p + mobileTouch;
                 break;
             case "info":
-                selTitle.innerHTML = selectorInfo.info.title
-                selP.innerHTML = selectorInfo.info.p
+                selTitle.innerHTML = selectorInfo.info.title;
+                selP.innerHTML = selectorInfo.info.p + mobileTouch;
                 break;
             case "products":
-                selTitle.innerHTML = selectorInfo.products.title
-                selP.innerHTML = selectorInfo.products.p
+                selTitle.innerHTML = selectorInfo.products.title;
+                selP.innerHTML = selectorInfo.products.p + mobileTouch;
                 break;
             case "sbimg":
-                selTitle.innerHTML = selectorInfo.sbimg.title
-                selP.innerHTML = selectorInfo.sbimg.p
+                selTitle.innerHTML = selectorInfo.sbimg.title;
+                selP.innerHTML = selectorInfo.sbimg.p + mobileTouch;
                 break;
             case "sbanner":
-                selTitle.innerHTML = selectorInfo.sbanner.title
-                selP.innerHTML = selectorInfo.sbanner.p
+                selTitle.innerHTML = selectorInfo.sbanner.title;
+                selP.innerHTML = selectorInfo.sbanner.p + mobileTouch;
                 break;
             case "demoFooter":
-                selTitle.innerHTML = selectorInfo.demoFooter.title
-                selP.innerHTML = selectorInfo.demoFooter.p
+                selTitle.innerHTML = selectorInfo.demoFooter.title;
+                selP.innerHTML = selectorInfo.demoFooter.p + mobileTouch;
                 break;
         }
         selector.style.animationDuration = "0.15s"
@@ -255,7 +259,10 @@ const onTouch = (e) => {
 }
 document.addEventListener('touchstart', onTouch);
 
-
+document.getElementById("timeInput").oninput = function() {
+    var value = (this.value-this.min)/(this.max-this.min)*100;
+    this.style.background = 'linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) ' + value + '%, #fff ' + value + '%, white 100%)';
+  };
 
 
 
@@ -317,6 +324,7 @@ sbimg.addEventListener('touchstart', function () {
     isHovering = true;
     currentInfo = "sbimg";
 }, false)
+let info = document.getElementById('info');
 info.addEventListener('mouseleave', function () {
     isHovering = false;
 }, false)
