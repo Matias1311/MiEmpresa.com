@@ -8,34 +8,52 @@ function displayInfo (number) {
     c7.style.display = "none";
     c8.style.display = "none";
     c9.style.display = "none";
+    l1.style.backgroundColor = "var(--primary-color)";
+    l2.style.backgroundColor = "var(--primary-color)";
+    l3.style.backgroundColor = "var(--primary-color)";
+    l4.style.backgroundColor = "var(--primary-color)";
+    l5.style.backgroundColor = "var(--primary-color)";
+    l6.style.backgroundColor = "var(--primary-color)";
+    l7.style.backgroundColor = "var(--primary-color)";
+    document.getElementById("l8").style.backgroundColor = "var(--primary-color)";
+    document.getElementById("l9").style.backgroundColor = "var(--primary-color)";
 
     switch (number) {
         case 1:
             c1.style.display = "block";
-            break;
+            l1.style.backgroundColor = "var(--secondary-color)";
+        break;
         case 2:
             c2.style.display = "block";
+            l2.style.backgroundColor = "var(--secondary-color)";
             break;
         case 3:
             c3.style.display = "block";
+            l3.style.backgroundColor = "var(--secondary-color)";
             break;
         case 4:
             c4.style.display = "block";
+            l4.style.backgroundColor = "var(--secondary-color)";
             break;
         case 5:
             c5.style.display = "block";
+            l5.style.backgroundColor = "var(--secondary-color)";
             break;
         case 6:
             c6.style.display = "block";
+            l6.style.backgroundColor = "var(--secondary-color)";
             break;
         case 7:
             c7.style.display = "block";
+            l7.style.backgroundColor = "var(--secondary-color)";
             break;
         case 8:
             c8.style.display = "block";
+            l8.style.backgroundColor = "var(--secondary-color)";
             break;
         case 9:
             c9.style.display = "block";
+            l9.style.backgroundColor = "var(--secondary-color)";
             break;
         default:
             console.log("ERROR: INVALID SWITCH ARGUMENT");

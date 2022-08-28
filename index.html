@@ -19,13 +19,18 @@
                 <img id="menuIconClose" src="https://i.postimg.cc/VkKW35SD/menu-close.png" alt="" onclick="menuMobAnimation()">
                 <!-- Removal Link: https://postimg.cc/delete/z6ck5KMN/0ce4117c -->
             </div>
+            <div class="menu-logo">
+                <img src="https://i.postimg.cc/526F6QZy/Mi-Empresa-com-logo.png" alt="">
+                <!-- https://postimg.cc/delete/twVVPNVz/de579832 -->
+            </div>
             <div class="header-content">
                 <div class="page-title">
                     <h1>MiEmpresa.com</h1>
                 </div>
                 <nav class="navigation">
+                    <a href="index.html"><img src="https://i.postimg.cc/0N2sn70d/home.png" alt=""></a>
                     <ul class="nav-list">
-                        <li class="nav-element"><a href="index.html">Inicio</a></li>
+                        <!-- https://postimg.cc/delete/y2WHbLsM/1e113757 -->
                         <li class="nav-element"><p>Recomendaciones</p>
                             <ul>
                                 <li><a href="programando.html">Programando</a></li>
@@ -41,7 +46,6 @@
     </header>
     <div class="menu-mob" id="menuMob">
         <div class="menu-mob-content">
-            <li class="mob-element"><a href="index.html">Inicio</a></li>
             <li class="mob-element"><p>Puntos de Vista*</p></li>
             <li class="mob-info"><a href="programando.html">Programando</a></li>
             <li class="mob-info"><a href="disenando.html">Diseñando</a></li>
@@ -56,21 +60,119 @@
             <p class="title-desc">Brindamos recomendaciones para elaborar sitios web de los tres profesionales más influyentes en este proceso: Programadores, Diseñadores Gráficos, y Comunicadores.</p>
         </div>
         </div>
-    <section class="info">
-        <h1>¡Encuentre las siguientes recomendaciones para ayudarlo con su sitio web!</h1>
-        <div class="card-wrapper">
-            <a class="card" href="/programadores.html">
-                <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_1280.png" alt="" class="card-element">
-                <h2 class="card-element">Programando</h2>
-            </a>
-            <a class="card" href="/disenadores-graficos.html">
-                <img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg" alt="" class="card-element">
-                <h2 class="card-element">Diseñando</h2>
-            </a>
-            <a class="card" href="/comunicadores.html">
-                <img src="https://images.pexels.com/photos/3278765/pexels-photo-3278765.jpeg" alt="" class="card-element">
-                <h2 class="card-element">Comunicando</h2>
-            </a>
+    <section class="form">
+        <div id="initial">
+            <h2>¿Quieres hacer tu sitio web ahora?</h2>
+            <div class="form-container">
+                <div onclick="formChange('platform')">
+                    <img src="">
+                    <h2>Haz clic aquí para comenzar</h2>
+                    <p>Recopilamos una guía paso a paso con recomendaciones de profesionales involucrados para que crees tu propio sitio web para comercio electrónico.</p>
+                </div>
+            </div>
+        </div>
+        <div id="platform">
+            <h2>¿Cómo deseas hacer tu sitio web?</h2>
+            <div class="form-container">
+                <div onclick="formChange('templates')">
+                    <img src="">
+                    <h2>Usar una plantilla</h2>
+                    <p>Puedes crear tu sitio web sin conocimientos de programación con una plantilla en línea.</p>
+                </div>
+                <div onclick="formChange('program')">
+                    <img src="">
+                    <h2>Programar desde cero</h2>
+                    <p>Deberás tener conocimientos sobre HTML, CSS y JavaScript.</p>
+                </div>
+            </div>
+        </div>
+        <div id="program">
+            <h2>Recopilamos recomendaciones de expertos para ayudarte con tu sitio web</h2>
+            <div class="form-container">
+                <div>
+                    <img src="">
+                    <h2>Programar</h2>
+                    <p>Aquí hay recomendaciones para que puedas programar tu sitio web.</p>
+                </div>
+                <div>
+                    <img src="">
+                    <h2>Diseñar</h2>
+                    <p>Aquí hay recomendaciones para que puedas diseñar tu sitio web.</p>
+                </div>
+                <div>
+                    <img src="">
+                    <h2>Comunicar</h2>
+                    <p>Aquí hay recomendaciones para que puedas comunicarte en tu sitio web.</p>
+                </div>
+                <div>
+                    <img src="">
+                    <h2>Otras Recomendaciones</h2>
+                    <p>Aquí hay recomendaciones sobre otros aspectos de tu sitio web.</p>
+                </div>
+            </div>
+        </div>
+        <div id="demo">
+            <ul id="mobHeaderContent">
+                <img id="fakeMenuIcon" src="https://i.postimg.cc/XNCWvFnG/menu.png" alt="">
+            </ul>
+            <div id="demoHeader">
+                <div id="logo">Logo</div>
+                <ul id="headerContent">
+                    <li>Inicio</li>
+                    <li>Información de la Empresa</li>
+                    <li>Productos/Servicios</li>
+                </ul>
+            </div>
+            <div id="demoContact">
+                <ul id="contact">
+                    <li><img src="https://cdn.pixabay.com/photo/2017/12/06/04/56/facebook-3000954_1280.png" alt=""></li>
+                    <li><img src="https://cdn.pixabay.com/photo/2017/03/24/07/28/whatsapp-2170427_1280.png" alt=""></li>
+                    <li><img src="https://cdn.pixabay.com/photo/2016/12/04/18/58/instagram-1882330_1280.png" alt=""></li>
+                </ul>
+            </div>
+            <div id="demoContent">
+                <div id="simg">
+                    <p>Imagen</p>
+                    <div id="info">
+                        <h3>Nombre de la Empresa</h3>
+                        <p>Descripción de la Empresa</p>
+                    </div>
+                </div>
+                <div id="products">
+                    <h4>Productos</h4>
+                    <div>
+                        <div>
+                            <div>Imagen</div>
+                            <p>Descripción</p>
+                        </div>
+                        <div>
+                            <div>Imagen</div>
+                            <p>Descripción</p>
+                        </div>
+                        <div>
+                            <div>Imagen</div>
+                            <p>Descripción</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="demoBanner">
+                <div id="sbimg">Imagen</div>
+                <div id="sbanner">Banner (<a>Enlace</a>)</div>
+                <img class="banner-close" src="https://i.postimg.cc/8CKLfGR7/cross.png" alt="cerrar">
+                <!-- Removal link: https://postimg.cc/delete/nN5q4rJT/70c9593e -->
+            </div>
+            <div id="demoFooter">
+                <div>Información de Contacto</div>
+                <div>Enlaces Externos y Políticas</div>
+            </div>
+        </div>
+        <div id="selector">
+            <div id="content">
+                <h4 id="selTitle"></h4>
+                <p id="selP"></p>
+            </div>
+            <div id="arrow"></div>
         </div>
     </section>
     <section class="references">

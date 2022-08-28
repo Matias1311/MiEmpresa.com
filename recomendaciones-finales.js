@@ -4,22 +4,32 @@ function displayInfo (number) {
     c3.style.display = "none";
     c4.style.display = "none";
     c5.style.display = "none";
+    l1.style.display = "none";
+    l2.style.display = "none";
+    l3.style.display = "none";
+    l4.style.display = "none";
+    l5.style.display = "none";
 
     switch (number) {
         case 1:
             c1.style.display = "block";
+            l1.style.backgroundColor = "var(--secondary-color)";
             break;
         case 2:
             c2.style.display = "block";
+            l2.style.backgroundColor = "var(--secondary-color)";
             break;
         case 3:
             c3.style.display = "block";
+            l3.style.backgroundColor = "var(--secondary-color)";
             break;
         case 4:
             c4.style.display = "block";
+            l4.style.backgroundColor = "var(--secondary-color)";
             break;
         case 5:
             c5.style.display = "block";
+            l5.style.backgroundColor = "var(--secondary-color)";
             break;
         default:
             console.log("ERROR: INVALID SWITCH ARGUMENT");
