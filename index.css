@@ -607,7 +607,7 @@ body {
     justify-content: space-evenly;
 }
 
-#mainContent {
+.mainContent {
     flex-grow: 1;
     width: 100%;
     display: flex;
@@ -615,7 +615,7 @@ body {
     align-items: center;
     margin-top: calc(11vh + 6px);
 }
-#mainTitle {
+.mainTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -623,14 +623,14 @@ body {
     width: 100%;
     overflow: hidden;
 }
-#mainTitle img {
+.mainTitle img {
     width: 100%;
     height: 65vh;
     object-fit: cover;
     overflow: hidden;
     object-position: center 80%;
 }
-#titleContent {
+.titleContent {
     position: absolute;
     bottom: 12px;
     padding: 8px;
@@ -639,7 +639,7 @@ body {
     color: white;
     background-color: rgba(0,0,0, 0.25);
 }
-#steps {
+.steps {
     display: flex;
     flex-direction: row;
     padding: 24px;
@@ -647,10 +647,12 @@ body {
     gap: 16px;
     background-color: white;
 }
-#steps>div {
+.steps>div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex: 1;
+    text-align: justify;
 }
 .step-title {
     display: flex;
@@ -681,22 +683,28 @@ body {
     color: var(--primary-color);
     text-decoration: underline;
 }
-#recommendations {
+.recommendations {
     display: flex;
     flex-direction: column;
     padding: 24px;
     width: calc(100% - 48px);
     background-color: white;
 }
-#buttonList {
-    margin-top: 16px;
+#mainButtonList, #pButtonList, #dButtonList, #cButtonList, #mButtonList {
+    padding-top: 16px;
     display: flex;
     margin-left: -24px;
     margin-right: -24px;
     background-color: #e6e6e6;
     gap: 2px;
+    display: none;
 }
-#buttonList button {
+#mainButtonList {
+    padding: 0;
+    margin-top: 16px;
+    display: flex;
+}
+#mainButtonList button, #pButtonList button, #dButtonList button, #cButtonList button, #mButtonList button {
     flex: 1;
     background-color: var(--primary-color);
     color: white;
@@ -707,14 +715,14 @@ body {
     -webkit-animation: shrink 0.75s ease 0s 1 normal forwards;
     -o-animation: shrink 0.75s ease 0s 1 normal forwards;
 }
-#buttonList button:hover {
+#mainButtonList button:hover, #pButtonList button:hover, #dButtonList button:hover, #cButtonList button:hover, #mButtonList button:hover {
     background-color: var(--secondary-color);
     animation: grow 0.75s ease 0s 1 normal forwards;
     -moz-animation: grow 0.75s ease 0s 1 normal forwards;
     -webkit-animation: grow 0.75s ease 0s 1 normal forwards;
     -o-animation: grow 0.75s ease 0s 1 normal forwards;
 }
-#buttonList button:active {
+#mainButtonList button:active, #pButtonList button:active, #dButtonList button:active, #cButtonList button:active, #mButtonList button:active {
     background-color: var(--third-color);
     animation: grow 0.75s ease 0s 1 normal forwards;
     -moz-animation: grow 0.75s ease 0s 1 normal forwards;
@@ -737,16 +745,19 @@ body {
         flex-grow: 1;
     }
 }
-#reco-grid {
+.reco-grid {
     background-color: #e6e6e6;
     margin: 0 -24px;
     margin-bottom: -24px;
     padding: 0 24px;
     padding-bottom: 24px;
+    padding-top: 16px;
+}
+.reco-grid>div {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 8px;
-    padding-top: 16px;
+    display: none;
 }
 .card {
     display: flex;

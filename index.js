@@ -78,11 +78,15 @@ function updateMain(e) {
         document.querySelector("#timeContainer>h3").style.display = "none";
         if (isMobile) {
             document.getElementById("timeSlider").style.height = "10vh";
-            document.getElementById("mainContent").style.marginTop = "calc(10vh + 6px)";
+            document.querySelectorAll(".mainContent").forEach((e) => {
+                e.style.marginTop = "calc(10vh + 6px)";
+            });
         }
         else {
             document.getElementById("timeSlider").style.height = "6.7vh";
-            document.getElementById("mainContent").style.marginTop = "calc(6.7vh + 6px)";    
+            document.querySelectorAll(".mainContent").forEach((e) => {
+                e.style.marginTop = "calc(6.7vh + 6px)";
+            });
         }
         displayInputHelp--;
     }
@@ -90,144 +94,65 @@ function updateMain(e) {
         document.getElementById("store").style.display = "block";
         document.getElementById("template").style.display = "none";
         document.getElementById("program").style.display = "none";
+
+        changeGrid(1);
     }
     else if (26 <= value && value <= 75) {
         document.getElementById("store").style.display = "none";
         document.getElementById("template").style.display = "block";
         document.getElementById("program").style.display = "none";
+
+        changeGrid(1);
     }
     else if (76 <= value && value <= 100) {
         document.getElementById("store").style.display = "none";
         document.getElementById("template").style.display = "none";
         document.getElementById("program").style.display = "block";
+        
+        changeGrid(1);
     }
 };
 
 updateMain(document.getElementById("timeInput"));
 
-function changeGrid(gridNumber) {
-    switch (gridNumber) {
-        case 1: {
-            if (0 <= value && value <= 25) {
-                s1.style.display = "block";
-                s2.style.display = "none";
-                s3.style.display = "none";
-                s4.style.display = "none";
-                s5.style.display = "none";
-            }
-            else if (26 <= value && value <= 75) {
-                t1.style.display = "block";
-                t2.style.display = "none";
-                t3.style.display = "none";
-                t4.style.display = "none";
-                t5.style.display = "none";
-            }
-            else if (76 <= value && value <= 100) {
-                p1.style.display = "block";
-                p2.style.display = "none";
-                p3.style.display = "none";
-                p4.style.display = "none";
-                p5.style.display = "none";
-            }
+function displayButton(buttonNumber) {
+    switch (buttonNumber) {
+        case 1:
+            pButtonList.style.display = "flex";
+            dButtonList.style.display = "none";
+            cButtonList.style.display = "none";
+            mButtonList.style.display = "none";
             break;
-        }
-        case 2: {
-            if (0 <= value && value <= 25) {
-                s1.style.display = "none";
-                s2.style.display = "block";
-                s3.style.display = "none";
-                s4.style.display = "none";
-                s5.style.display = "none";
-            }
-            else if (26 <= value && value <= 75) {
-                t1.style.display = "none";
-                t2.style.display = "block";
-                t3.style.display = "none";
-                t4.style.display = "none";
-                t5.style.display = "none";
-            }
-            else if (76 <= value && value <= 100) {
-                p1.style.display = "none";
-                p2.style.display = "block";
-                p3.style.display = "none";
-                p4.style.display = "none";
-                p5.style.display = "none";
-            }
+        case 2:
+            pButtonList.style.display = "none";
+            dButtonList.style.display = "flex";
+            cButtonList.style.display = "none";
+            mButtonList.style.display = "none";
             break;
-        }
-        case 3: {
-            if (0 <= value && value <= 25) {
-                s1.style.display = "none";
-                s2.style.display = "none";
-                s3.style.display = "block";
-                s4.style.display = "none";
-                s5.style.display = "none";
-            }
-            else if (26 <= value && value <= 75) {
-                t1.style.display = "none";
-                t2.style.display = "none";
-                t3.style.display = "block";
-                t4.style.display = "none";
-                t5.style.display = "none";
-            }
-            else if (76 <= value && value <= 100) {
-                p1.style.display = "none";
-                p2.style.display = "none";
-                p3.style.display = "block";
-                p4.style.display = "none";
-                p5.style.display = "none";
-            }
+        case 3:
+            pButtonList.style.display = "none";
+            dButtonList.style.display = "none";
+            cButtonList.style.display = "flex";
+            mButtonList.style.display = "none";
             break;
-        }
-        case 4: {
-            if (0 <= value && value <= 25) {
-                s1.style.display = "none";
-                s2.style.display = "none";
-                s3.style.display = "none";
-                s4.style.display = "block";
-                s5.style.display = "none";
-            }
-            else if (26 <= value && value <= 75) {
-                t1.style.display = "none";
-                t2.style.display = "none";
-                t3.style.display = "none";
-                t4.style.display = "block";
-                t5.style.display = "none";
-            }
-            else if (76 <= value && value <= 100) {
-                p1.style.display = "none";
-                p2.style.display = "none";
-                p3.style.display = "none";
-                p4.style.display = "block";
-                p5.style.display = "none";
-            }
+        case 4:
+            pButtonList.style.display = "none";
+            dButtonList.style.display = "none";
+            cButtonList.style.display = "none";
+            mButtonList.style.display = "flex";
             break;
-        }
-        case 5: {
-            if (0 <= value && value <= 25) {
-                s1.style.display = "none";
-                s2.style.display = "none";
-                s3.style.display = "none";
-                s4.style.display = "none";
-                s5.style.display = "block";
-            }
-            else if (26 <= value && value <= 75) {
-                t1.style.display = "none";
-                t2.style.display = "none";
-                t3.style.display = "none";
-                t4.style.display = "none";
-                t5.style.display = "block";
-            }
-            else if (76 <= value && value <= 100) {
-                p1.style.display = "none";
-                p2.style.display = "none";
-                p3.style.display = "none";
-                p4.style.display = "none";
-                p5.style.display = "block";
-            }
-            break;
-        }
+        default:
+            console.error("INVALID SWITCH ARGUMENT");
+            break;                
     }
+}
+
+function changeGrid(button, gridNumber) {
+    console.log(button);
+        document.querySelector("#" + button.parentNode.id + ">button:nth-child(" + gridNumber + ")").style.display = "flex";
+        document.querySelectorAll("#" + button.parentNode.id + ">button:not(:nth-child(" + gridNumber + ")").forEach ((e) => {
+            e.style.display = "none";
+        });
 }
 changeGrid(1);
 
