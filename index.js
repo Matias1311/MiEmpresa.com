@@ -60,7 +60,6 @@ function displayMain() {
         e.style.display = "none";
     });
 }
-displayMain();
 let displayInputHelp = 2;
 let value;
 let isMobile = false;
