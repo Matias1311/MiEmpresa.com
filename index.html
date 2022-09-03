@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brindamos recomendaciones de los profesionales más influyentes en el proceso de elaboración de tu sitio web: programadores, diseñadores gráficos, fotógrafos, mercadólogos y comunicadores.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://i.postimg.cc/ydN5P6jC/Mi-Empresa-com-Logo-1-remove-bg.png" type="image/x-icon">
+    <!-- https://postimg.cc/delete/8q73nfpF/48b8a6eb -->
     <title>MiEmpresa.com</title>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -20,7 +23,7 @@
                 <!-- Removal Link: https://postimg.cc/delete/z6ck5KMN/0ce4117c -->
             </div>
             <div class="menu-logo">
-                <img src="https://i.postimg.cc/526F6QZy/Mi-Empresa-com-logo.png" alt="">
+                <img src="https://i.postimg.cc/ydN5P6jC/Mi-Empresa-com-Logo-1-remove-bg.png" alt="">
                 <!-- https://postimg.cc/delete/twVVPNVz/de579832 -->
             </div>
             <div class="header-content">
@@ -54,64 +57,39 @@
         </div>
     </div>
     <div class="title">
-        <img src="https://wellaggio.com/wp-content/uploads/2018/01/Wellaggio-diseno-web-valencia-Co%CC%81mo-seducir-a-tus-clientes-con-tu-pa%CC%81gina-web.jpg">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/06/17/computer-1867758_960_720.jpg">
+        <!-- https://postimg.cc/delete/BkPJf2L5/a53870fd -->
         <div class="title-txt-cont">
             <h1 class="title-txt">MiEmpresa.com</h1>
-            <p class="title-desc">Brindamos recomendaciones para elaborar sitios web de los tres profesionales más influyentes en este proceso: Programadores, Diseñadores Gráficos, y Comunicadores.</p>
+            <p class="title-desc">Brindamos recomendaciones de los profesionales más influyentes en el proceso de elaboración de tu sitio web: programadores, diseñadores gráficos, fotógrafos, mercadólogos y comunicadores.</p>
         </div>
         </div>
     <section class="form">
         <div id="initial">
-            <h2>¿Quieres hacer tu sitio web ahora?</h2>
+            <h2>¿Quieres hacer tu sitio web ahora?*</h2>
             <div class="form-container">
-                <div onclick="formChange('platform')">
-                    <img src="">
+                <div onclick="formChange('tips')">
+                    <img src="https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_960_720.jpg" alt="sitio web">
                     <h2>Haz clic aquí para comenzar</h2>
                     <p>Recopilamos una guía paso a paso con recomendaciones de profesionales involucrados para que crees tu propio sitio web para comercio electrónico.</p>
-                </div>
+                </div>   
             </div>
         </div>
-        <div id="platform">
-            <h2>¿Cómo deseas hacer tu sitio web?</h2>
-            <div class="form-container">
-                <div onclick="formChange('templates')">
-                    <img src="">
-                    <h2>Usar una plantilla</h2>
-                    <p>Puedes crear tu sitio web sin conocimientos de programación con una plantilla en línea.</p>
-                </div>
-                <div onclick="formChange('program')">
-                    <img src="">
-                    <h2>Programar desde cero</h2>
-                    <p>Deberás tener conocimientos sobre HTML, CSS y JavaScript.</p>
-                </div>
-            </div>
-        </div>
-        <div id="program">
-            <h2>Recopilamos recomendaciones de expertos para ayudarte con tu sitio web</h2>
+        <div id="tips">
+            <h2>10 consejos prácticos antes de iniciar la elaboración de tu sitio web:</h2>
             <div class="form-container">
                 <div>
-                    <img src="">
-                    <h2>Programar</h2>
-                    <p>Aquí hay recomendaciones para que puedas programar tu sitio web.</p>
+                    <video playsinline src="/assets/10 tips.mp4" id="tenVideo""></video>
                 </div>
-                <div>
-                    <img src="">
-                    <h2>Diseñar</h2>
-                    <p>Aquí hay recomendaciones para que puedas diseñar tu sitio web.</p>
-                </div>
-                <div>
-                    <img src="">
-                    <h2>Comunicar</h2>
-                    <p>Aquí hay recomendaciones para que puedas comunicarte en tu sitio web.</p>
-                </div>
-                <div>
-                    <img src="">
-                    <h2>Otras Recomendaciones</h2>
-                    <p>Aquí hay recomendaciones sobre otros aspectos de tu sitio web.</p>
-                </div>
+                <div class="back" onclick="formChange('initial')">
+                    <p><strong>&#8592</strong> Atrás</p>
+                </div>    
+                <div class="next" onclick="displayMain()">
+                    <p>Siguiente <strong>&#8594</strong></p>
+                </div>    
             </div>
         </div>
-        <div id="demo">
+        <!-- <div id="demo">
             <h2 id="demoh2"></h2>
             <ul id="mobHeaderContent">
                 <img id="fakeMenuIcon" src="https://i.postimg.cc/XNCWvFnG/menu.png" alt="">
@@ -161,39 +139,407 @@
                 <div id="sbimg">Imagen</div>
                 <div id="sbanner">Banner (<a>Enlace</a>)</div>
                 <img class="banner-close" src="https://i.postimg.cc/8CKLfGR7/cross.png" alt="cerrar">
-                <!-- Removal link: https://postimg.cc/delete/nN5q4rJT/70c9593e -->
+                Removal link: https://postimg.cc/delete/nN5q4rJT/70c9593e
             </div>
             <div id="demoFooter">
                 <div>Información de Contacto</div>
                 <div>Enlaces Externos y Políticas</div>
             </div>
-        </div>
-        <div id="timeSlider">
-            <h3>Mueve este deslizador según el tiempo que le quieres dedicar a tu sitio web.</h2>
-            <div id="timeInputContainer">
-                <p>Menos Esfuerzo</p>
-                <input type="range" min="1" max="4" value="0" id="timeInput">
-                <p>Más Esfuerzo</p>
-            </div>
-        </div>
-        <div id="timeInfo">
-            <div id="t1">
-                <h3 id="timeInfoh3"></h3>
-                <div id="timeInfoGrid">
-                    <div class="card">
-                        <img src="" alt="">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="selector">
+        </div> -->
+        <!-- <div id="selector">
             <div id="content">
                 <h4 id="selTitle"></h4>
                 <p id="selP"></p>
             </div>
             <div id="arrow"></div>
-        </div>
+        </div> -->
+    </section>
+    <section>
+        <section id="main">
+            <div id="timeSlider">
+                <div id="timeContainer">
+                    <h3>Mueve este deslizador según el tiempo que le quieres dedicar a tu sitio web.</h2>
+                    <div id="timeInputContainer">
+                        <p>Menos Esfuerzo</p>
+                        <input type="range" min="0" max="100" value="80" id="timeInput" oninput="updateMain(this)">
+                        <p>Más Esfuerzo</p>
+                    </div>
+                    <div id="timeScale">
+                        <p>0%</p>
+                        <p>25%</p>
+                        <p></p>
+                        <p>75%</p>
+                        <p>100%</p>
+                    </div>
+                </div>
+            </div>
+            <div id="mainContent">
+                <section id="store">
+                    <div id="mainTitle">
+                        <img src="https://cdn.pixabay.com/photo/2019/04/26/07/14/store-4156934_960_720.png" alt="tienda en línea">
+                        <div id="titleContent">
+                            <h3>Abre tu Tienda en Línea</h3>
+                            <p>Recomendaciones para programar</p>
+                        </div>
+                    </div>
+                    <div id="steps">
+                        <div class="l1">
+                            <div class="step-title">
+                                <p>1</p>
+                                <h4>Paso 1:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                        <div class="l2">
+                            <div class="step-title">
+                                <p>2</p>
+                                <h4>Paso 2:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                        <div class="l3">
+                            <div class="step-title">
+                                <p>3</p>
+                                <h4>Paso 3:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                        <div class="l4">
+                            <div class="step-title">
+                                <p>4</p>
+                                <h4>Paso 4:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                        <div class="l5">
+                            <div class="step-title">
+                                <p>5</p>
+                                <h4>Paso 5:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="recommendations">
+                        <h3>Recomendaciones de Expertos</h3>
+                        <p>Estas son algunas recomendaciones que recopilamos para tí, que provienen de expertos y profesionales como programadores, diseñadores gráficos, comunicadores, fotógrafos, y expertos en marketing.</p>
+                        <div id="buttonList">
+                            <button onclick="changeGrid(1)">
+                                <h4>Contenido 1</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(2)">
+                                <h4>Contenido 2</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(3)">
+                                <h4>Contenido 3</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(4)">
+                                <h4>Contenido 4</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(5)">
+                                <h4>Contenido 5</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                        </div>
+                        <div id="reco-grid">
+                            <div id="s1">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="s2">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="s3">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="s4">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="s5">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="template">
+                    <div id="mainTitle">
+                        <img src="https://cdn.pixabay.com/photo/2016/08/27/12/06/website-1624028_960_720.png" alt="programadores">
+                        <div id="titleContent">
+                            <h3>Usa una plantilla</h3>
+                            <p>Recomendaciones para programar</p>
+                        </div>
+                    </div>
+                    <div id="steps">
+                        <div class="l1">
+                            <div class="step-title">
+                                <p>1</p>
+                                <h4>Paso 1:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                        <div class="l2">
+                            <div class="step-title">
+                                <p>2</p>
+                                <h4>Paso 2:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                        <div class="l3">
+                            <div class="step-title">
+                                <p>3</p>
+                                <h4>Paso 3:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                        <div class="l4">
+                            <div class="step-title">
+                                <p>4</p>
+                                <h4>Paso 4:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                        <div class="l5">
+                            <div class="step-title">
+                                <p>5</p>
+                                <h4>Paso 5:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="recommendations">
+                        <h3>Recomendaciones de Expertos</h3>
+                        <p>Estas son algunas recomendaciones que recopilamos para tí, que provienen de expertos y profesionales como programadores, diseñadores gráficos, comunicadores, fotógrafos, y expertos en marketing.</p>
+                        <div id="buttonList">
+                            <button onclick="changeGrid(1)">
+                                <h4>Contenido 1</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(2)">
+                                <h4>Contenido 2</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(3)">
+                                <h4>Contenido 3</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(4)">
+                                <h4>Contenido 4</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(5)">
+                                <h4>Contenido 5</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                        </div>
+                        <div id="reco-grid">
+                            <div id="t1">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="t2">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="t3">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="t4">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="t5">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="program">
+                    <div id="mainTitle">
+                        <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="programadores">
+                        <div id="titleContent">
+                            <h3>Prográmalo tú mismo:</h3>
+                            <p>CREA tu tienda en línea.</p>
+                        </div>
+                    </div>
+                    <div id="steps">
+                        <div class="l1">
+                            <div class="step-title">
+                                <p>1</p>
+                                <h4>Paso 1:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p><strong>Contrata</strong> hosting y dominio en <a href="https://www.ionos.com/" target="_blank">Ionos</a>, <a href="https://www.freenom.com/es/index.html/" target="_blank">Freenom</a> o <a href="https://www.hostinger.es/dominios-gratis/" target="_blank">Hostinger</a>, o <strong>utiliza</strong> hosting y dominio gratuito en <a href="https://www.freenom.com/es/index.html/" target="_blank">Freenom</a> o <a href="https://www.hostinger.es/dominios-gratis/" target="_blank">Hostinger</a>.</p>
+                            </div>
+                        </div>
+                        <div class="l2">
+                            <div class="step-title">
+                                <p>2</p>
+                                <h4>Paso 2:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Utiliza <strong>foros en línea</strong> como <a href="https://es.stackoverflow.com/" target="_blank">Stack Overflow</a>, <strong>herramientas para empresas</strong> como <a href="https://www.odoo.com/es_ES/" target="_blank">Odoo</a>, y <strong>código abierto</strong> que puedes encontrar en <a href="https://github.com/es/" target="_blank">Github</a>.</p>
+                            </div>
+                        </div>
+                        <div class="l3">
+                            <div class="step-title">
+                                <p>3</p>
+                                <h4>Paso 3:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p><strong>Selecciona tu paleta de colores:</strong> utiliza selectores de paletas de colores en <a href="https://coolors.co/" target="_blank">Coolors</a>, <a href="https://color.adobe.com/es/create/color-wheel/" target="_blank">Adobe Color</a>, <a href="https://javier.xyz/cohesive-colors/" target="_blank">Cohesive Colors</a> o <a href="https://www.colorhexa.com/" target="_blank">Color Hexa</a>, paletas de colores prediseñadas en <a href="https://colorhunt.co/" target="_blank">Color Hunt</a>, o utiliza generadores de colores HTML en <a href="https://htmlcolorcodes.com/color-picker/" target="_blank">Color Picker</a>.</p>
+                            </div>
+                        </div>
+                        <div class="l4">
+                            <div class="step-title">
+                                <p>4</p>
+                                <h4>Paso 4:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p><strong>Crea tu propia marca:</strong> obtén tu logo personalizable y adecúalo a tu paleta de colores en <a href="https://www.renderforest.com/es/logos/" target="_blank">Renderforest</a> y elige entre una variedad de tipografías para tu sitio web en <a href="https://fonts.google.com/"></a></p>
+                            </div>
+                        </div>
+                        <div class="l5">
+                            <div class="step-title">
+                                <p>5</p>
+                                <h4>Paso 5:</h4>
+                            </div>
+                            <div class="step-desc">
+                                <p>Esta es una descripción larga del paso que tiene que seguir el usuario para que pueda crear distintos aspectos de su sitio web. Incluiré enlaces y videos para que el usuario tenga la mayor facilidad y pueda acceder a estos recursos rápidamente.</p>
+                                <a href="">Enlaces y recursos</a>
+                                <a href="">Videos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="recommendations">
+                        <h3>Recomendaciones de Expertos</h3>
+                        <p>Estas son algunas recomendaciones que recopilamos para tí, que provienen de expertos y profesionales como programadores, diseñadores gráficos, comunicadores, fotógrafos, y expertos en marketing.</p>
+                        <div id="buttonList">
+                            <button onclick="changeGrid(1)">
+                                <h4>Contenido 1</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(2)">
+                                <h4>Contenido 2</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(3)">
+                                <h4>Contenido 3</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(4)">
+                                <h4>Contenido 4</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                            <button onclick="changeGrid(5)">
+                                <h4>Contenido 5</h4>
+                                <p>Descripción del Contenido</p>
+                            </button>
+                        </div>
+                        <div id="reco-grid">
+                            <div id="p1">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="p2">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="p3">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="p4">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                            <div id="p5">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
+                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
     </section>
     <section class="references">
         <button class="references-title" onclick="expandReferences()">
@@ -223,8 +569,8 @@
         <div class="banner-content">
             <h3 class="banner-element">Encuesta</h3>
             <p class="banner-element">Por favor, cuando termine su visita responda la siguiente encuesta <a href="https://forms.office.com/r/jtJ4B4SC2z" target="_blank">aquí</a>.</p>
-            <img class="banner-close" src="https://i.postimg.cc/8CKLfGR7/cross.png" alt="cross" onclick="closeBanner()">
-            <!-- Removal link: https://postimg.cc/delete/nN5q4rJT/70c9593e -->
+            <img class="banner-close" src="https://i.postimg.cc/8kvg6Pzf/cross.png" alt="cross" onclick="closeBanner()">
+            <!-- https://postimg.cc/delete/qFsHX6jm/c18f5c9d -->
         </div>
     </div>
     <footer>
