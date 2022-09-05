@@ -60,10 +60,6 @@ function formChange(display) {
 }
 let displayInputHelp = 2;
 let value;
-let isMobile = false;
-document.addEventListener("touchstart", () => {
-    isMobile = true;
-})
 function updateMain(e) {
     value = Math.round((e.value-e.min)/(e.max-e.min)*100);
     e.style.background = 'linear-gradient(to right, var(--secondary-color) 0%, var(--secondary-color) ' + value + '%, #fff ' + value + '%, white 100%)';
@@ -185,6 +181,30 @@ function changeGrid(button, gridNumber) {
     document.querySelectorAll("#" + button.parentNode.id.charAt(0) + "ButtonList button:not(:nth-child(" + gridNumber + ")").forEach((e) => {
         e.style.backgroundColor = "var(--primary-color)";
     });
+}
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+if (isMobile.any()) {
+    document.getElementById("mobCss").setAttribute("media", "all");
 }
 
 
