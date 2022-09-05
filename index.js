@@ -224,8 +224,8 @@ function detectMob() {
         return navigator.userAgent.match(toMatchItem);
     });
 }
-if (isMobile.any() || window.mobileCheck() || navMobile || detectMob() || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || /AndroidwebOSiPhoneiPadiPodBlackBerryIEMobileOpera Mini/i.test(navigator.userAgent) || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua) || /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ||
-(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform)) || typeof window.orientation !== 'undefined' || window.matchMedia('(any-pointer: coarse)').matches) {
+if (isMobile.any() || window.mobileCheck() || navMobile || detectMob() || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || /AndroidwebOSiPhoneiPadiPodBlackBerryIEMobileOpera Mini/i.test(navigator.userAgent) || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(navigator.userAgent) || /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ||
+(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform)) || typeof window.orientation !== 'undefined') {
     document.getElementById("mobCss").setAttribute("media", "all");
 }
 
