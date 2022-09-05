@@ -1,5 +1,11 @@
 function closeBanner () {
     banner.style.display = "none";
+    bannerShow.style.display = "block";
+}
+function showBanner() {
+    banner.style.animationDelay = "0s";
+    banner.style.display = "block";
+    bannerShow.style.display = "none";
 }
 var referencesAreExpanded = true;
 function expandReferences () {
@@ -52,14 +58,6 @@ function formChange(display) {
             break;
     }
 }
-formChange("initial");
-function displayMain() {
-    document.querySelector("body > section:nth-child(5)").style.display = "block";
-    main.style.display = "flex";
-    document.querySelectorAll("body *:not(body > section:nth-child(5), #main, #main *, #banner, #banner *)").forEach ((e) => {
-        e.style.display = "none";
-    });
-}
 let displayInputHelp = 2;
 let value;
 let isMobile = false;
@@ -71,22 +69,11 @@ function updateMain(e) {
     e.style.background = 'linear-gradient(to right, var(--secondary-color) 0%, var(--secondary-color) ' + value + '%, #fff ' + value + '%, white 100%)';
     console.log(value);
     if (displayInputHelp > 0) {
+        document.querySelector(".mainContent").style.display = "flex";
         displayInputHelp--;
     }
     if(displayInputHelp === 0) {
         document.querySelector("#timeContainer>h3").style.display = "none";
-        if (isMobile) {
-            document.getElementById("timeSlider").style.height = "10vh";
-            document.querySelectorAll(".mainContent").forEach((e) => {
-                e.style.marginTop = "calc(10vh + 6px)";
-            });
-        }
-        else {
-            document.getElementById("timeSlider").style.height = "6.7vh";
-            document.querySelectorAll(".mainContent").forEach((e) => {
-                e.style.marginTop = "calc(6.7vh + 6px)";
-            });
-        }
         displayInputHelp--;
     }
     if (0 <= value && value <= 25) {
@@ -94,51 +81,93 @@ function updateMain(e) {
         document.getElementById("template").style.display = "none";
         document.getElementById("program").style.display = "none";
 
-        changeGrid(1);
+        document.querySelector("#mainButtonList button:first-child").style.display = "none";
+        displayButton(document.querySelector("#mainButtonList button:nth-child(2)"), 2);
     }
     else if (26 <= value && value <= 75) {
         document.getElementById("store").style.display = "none";
         document.getElementById("template").style.display = "block";
         document.getElementById("program").style.display = "none";
 
-        changeGrid(1);
+        document.querySelector("#mainButtonList button:first-child").style.display = "none";
+        displayButton(document.querySelector("#mainButtonList button:nth-child(2)"), 2);
     }
     else if (76 <= value && value <= 100) {
         document.getElementById("store").style.display = "none";
         document.getElementById("template").style.display = "none";
         document.getElementById("program").style.display = "block";
-        
-        changeGrid(1);
+
+        document.querySelector("#mainButtonList button:first-child").style.display = "block";
+        displayButton(document.querySelector("#mainButtonList button:first-child"), 1);
     }
 };
+document.getElementById("timeInput").addEventListener("mouseup", showTips)
+document.getElementById("timeInput").addEventListener("touchend", showTips)
+document.getElementById("timeInput").addEventListener("touchcancel", showTips)
 
-updateMain(document.getElementById("timeInput"));
+function showTips() {
+    document.getElementById("mainTips").style.display = "grid";
+    document.querySelector("#mainTips video").currentTime = 0;
+    document.querySelector("#mainTips video").play();
+    document.getElementById("timeInput").removeEventListener("mouseup", showTips)
+    document.getElementById("timeInput").removeEventListener("touchend", showTips)
+    document.getElementById("timeInput").removeEventListener("touchcancel", showTips)
+}
+function hideTips() {
+    document.getElementById("mainTips").style.display = "none";
+    document.getElementById("tipsShow").style.display = "block";
+}
 
-function displayButton(buttonNumber) {
+function displayButton(button, buttonNumber) {
+    button.style.backgroundColor = "var(--secondary-color)";
+    document.querySelectorAll("#mainButtonList button:not(:nth-child(" + buttonNumber + ")").forEach((e) => {
+        e.style.backgroundColor = "var(--primary-color)";
+    });
     switch (buttonNumber) {
         case 1:
             pButtonList.style.display = "flex";
             dButtonList.style.display = "none";
             cButtonList.style.display = "none";
-            mButtonList.style.display = "none";
+            vButtonList.style.display = "none";
+            pGrid.style.display = "block";
+            dGrid.style.display = "none";
+            cGrid.style.display = "none";
+            vGrid.style.display = "none";
+
+            changeGrid(document.querySelector("#pButtonList button:first-child"), 1);
             break;
         case 2:
             pButtonList.style.display = "none";
             dButtonList.style.display = "flex";
             cButtonList.style.display = "none";
-            mButtonList.style.display = "none";
+            vButtonList.style.display = "none";
+            pGrid.style.display = "none";
+            dGrid.style.display = "block";
+            cGrid.style.display = "none";
+            vGrid.style.display = "none";
+            changeGrid(document.querySelector("#dButtonList button:first-child"), 1);
             break;
         case 3:
             pButtonList.style.display = "none";
             dButtonList.style.display = "none";
             cButtonList.style.display = "flex";
-            mButtonList.style.display = "none";
+            vButtonList.style.display = "none";
+            pGrid.style.display = "none";
+            dGrid.style.display = "none";
+            cGrid.style.display = "block";
+            vGrid.style.display = "none";
+            changeGrid(document.querySelector("#cButtonList button:first-child"), 1);
             break;
         case 4:
             pButtonList.style.display = "none";
             dButtonList.style.display = "none";
             cButtonList.style.display = "none";
-            mButtonList.style.display = "flex";
+            vButtonList.style.display = "flex";
+            pGrid.style.display = "none";
+            dGrid.style.display = "none";
+            cGrid.style.display = "none";
+            vGrid.style.display = "block";
+            changeGrid(document.querySelector("#vButtonList button:first-child"), 1);
             break;
         default:
             console.error("INVALID SWITCH ARGUMENT");
@@ -147,13 +176,17 @@ function displayButton(buttonNumber) {
 }
 
 function changeGrid(button, gridNumber) {
-    console.log(button);
-        document.querySelector("#" + button.parentNode.id + ">button:nth-child(" + gridNumber + ")").style.display = "flex";
-        document.querySelectorAll("#" + button.parentNode.id + ">button:not(:nth-child(" + gridNumber + ")").forEach ((e) => {
-            e.style.display = "none";
-        });
+    document.getElementById(button.parentNode.id.charAt(0) + "Grid").style.display = "block";
+    document.querySelector("#" + (button.parentNode.id.charAt(0)) + gridNumber).style.display = "flex";
+    document.querySelectorAll("#" + (button.parentNode.id.charAt(0) + "Grid") + ">div:not(:nth-child(" + gridNumber + ")").forEach ((e) => {
+        e.style.display = "none";
+    });
+    button.style.backgroundColor = "var(--secondary-color)";
+    document.querySelectorAll("#" + button.parentNode.id.charAt(0) + "ButtonList button:not(:nth-child(" + gridNumber + ")").forEach((e) => {
+        e.style.backgroundColor = "var(--primary-color)";
+    });
 }
-changeGrid(1);
+
 
 
 

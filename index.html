@@ -12,6 +12,7 @@
     <!-- https://postimg.cc/delete/8q73nfpF/48b8a6eb -->
     <title>MiEmpresa.com</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -64,32 +65,8 @@
             <p class="title-desc">Brindamos recomendaciones de los profesionales más influyentes en el proceso de elaboración de tu sitio web: programadores, diseñadores gráficos, fotógrafos, mercadólogos y comunicadores.</p>
         </div>
         </div>
-    <section class="form">
-        <div id="initial">
-            <h2>¿Quieres hacer tu sitio web ahora?*</h2>
-            <div class="form-container">
-                <div onclick="formChange('tips')">
-                    <img src="https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_960_720.jpg" alt="sitio web">
-                    <h2>Haz clic aquí para comenzar</h2>
-                    <p>Recopilamos una guía paso a paso con recomendaciones de profesionales involucrados para que crees tu propio sitio web para comercio electrónico.</p>
-                </div>   
-            </div>
-        </div>
-        <div id="tips">
-            <h2>10 consejos prácticos antes de iniciar la elaboración de tu sitio web:</h2>
-            <div class="form-container">
-                <div>
-                    <video playsinline src="assets/10 tips.mp4" id="tenVideo""></video>
-                </div>
-                <div class="back" onclick="formChange('initial')">
-                    <p><strong>&#8592</strong> Atrás</p>
-                </div>    
-                <div class="next" onclick="displayMain()">
-                    <p>Siguiente <strong>&#8594</strong></p>
-                </div>    
-            </div>
-        </div>
-        <!-- <div id="demo">
+    <!-- <section class="form">
+        <div id="demo">
             <h2 id="demoh2"></h2>
             <ul id="mobHeaderContent">
                 <img id="fakeMenuIcon" src="https://i.postimg.cc/XNCWvFnG/menu.png" alt="">
@@ -152,8 +129,13 @@
                 <p id="selP"></p>
             </div>
             <div id="arrow"></div>
-        </div> -->
-    </section>
+        </div>
+    </section> -->
+    <!-- <div id="tips">
+        <div class="form-container">
+            
+        </div>
+    </div> -->
     <section>
         <section id="main">
             <div id="timeSlider">
@@ -171,6 +153,13 @@
                         <p>75%</p>
                         <p>100%</p>
                     </div>
+                </div>
+            </div>
+            <div id="mainTips">
+                <div id="mainTipsContainer">
+                    <i class="fa fa-times" onclick="hideTips()"></i>
+                    <h3>¡Espera! Antes revisa:</h3>
+                    <video playsinline autoplay src="assets/10 tips.mp4" id="tenVideo"></video>
                 </div>
             </div>
             <div class="mainContent">
@@ -337,233 +326,714 @@
                     <h3>Recomendaciones de Expertos</h3>
                     <p>Estas son algunas recomendaciones que recopilamos para tí, que provienen de expertos y profesionales como programadores, diseñadores gráficos, comunicadores, fotógrafos, y expertos en marketing.</p>
                     <div id="mainButtonList">
-                        <button onclick="displayButton(1)">
+                        <button onclick="displayButton(this, 1)">
                             <h4>Programar</h4>
                         </button>
-                        <button onclick="displayButton(2)">
+                        <button onclick="displayButton(this, 2)">
                             <h4>Diseñar</h4>
                         </button>
-                        <button onclick="displayButton(3)">
+                        <button onclick="displayButton(this, 3)">
                             <h4>Comunicar</h4>
                         </button>
-                        <button onclick="displayButton(4)">
+                        <button onclick="displayButton(this, 4)">
                             <h4>Vender</h4>
                         </button>
                     </div>
                     <div id="pButtonList">
                         <button onclick="changeGrid(this, 1)">
-                            <h4>Contenido 1</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Rapidez de carga</h5>
+                            <p>A veces menos es más</p>
                         </button>
                         <button onclick="changeGrid(this, 2)">
-                            <h4>Contenido 2</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Códigos de seguimiento y análisis</h5>
+                            <p>Lo que puedo medir puedo mejorar</p>
                         </button>
                         <button onclick="changeGrid(this, 3)">
-                            <h4>Contenido 3</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Autogestión</h5>
+                            <p>Hazlo tú mismo</p>
                         </button>
                         <button onclick="changeGrid(this, 4)">
-                            <h4>Contenido 4</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Seguridad y Privacidad</h5>
+                            <p>Haz que tu cliente controle su información</p>
                         </button>
                         <button onclick="changeGrid(this, 5)">
-                            <h4>Contenido 5</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Estructura de Programación</h5>
+                            <p>Aquí falta algo (?)</p>
                         </button>
                     </div>
                     <div id="dButtonList">
                         <button onclick="changeGrid(this, 1)">
-                            <h4>Contenido 1</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Simple (?)</h5>
+                            <p>Único e innovador</p>
                         </button>
                         <button onclick="changeGrid(this, 2)">
-                            <h4>Contenido 2</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Navegación Sencilla e Intuitiva</h5>
+                            <p>Que tu cliente no se pierda en el intento</p>
                         </button>
                         <button onclick="changeGrid(this, 3)">
-                            <h4>Contenido 3</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Colores</h5>
+                            <p>Representa la identidad de tu empresa, impacta a tu cliente y generan sentimientos.</p>
                         </button>
                         <button onclick="changeGrid(this, 4)">
-                            <h4>Contenido 4</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Diseño Responsivo</h5>
+                            <p>Más del 83% de personas tienen un equipo móvil</p>
                         </button>
                         <button onclick="changeGrid(this, 5)">
-                            <h4>Contenido 5</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Tipografía</h5>
+                            <p>Importante para facilitar la lectura y formar la identidad de una empresa</p>
+                        </button>
+                        <button onclick="changeGrid(this, 6)">
+                            <h5>Imágenes y Videos</h5>
+                            <p>Para comprar tu producto, tu cliente quiere mirarlo primero</p>
+                        </button>
+                        <button  onclick="changeGrid(this, 7)">
+                            <h5>Elementos Gráficos</h5>
+                            <p>Incluye elementos que reflejan los objetivos de tu sitio web</p>
+                        </button>
+                        <button  onclick="changeGrid(this, 8)">
+                            <h5>Fotografías profesionales</h5>
+                            <p>Brinda detalles sobre el producto y puede ayudar a concertar una venta</p>
+                        </button>
+                        <button  onclick="changeGrid(this, 9)">
+                            <h5>Catálogos Digitales</h5>
+                            <p>Excelente medio de difusión de tus productos y su información</p>
                         </button>
                     </div>
                     <div id="cButtonList">
                         <button onclick="changeGrid(this, 1)">
-                            <h4>Contenido 1</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Organización de la Información</h5>
+                            <p>Debe ser clara para lograr que el usuario sepa dónde buscar lo que necesita</p>
                         </button>
                         <button onclick="changeGrid(this, 2)">
-                            <h4>Contenido 2</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Llamadas a la acción</h5>
+                            <p>Todas las acciones que uno puede implementar para que el cliente realice alguna acción favorable</p>
                         </button>
                         <button onclick="changeGrid(this, 3)">
-                            <h4>Contenido 3</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Contenido de calidad</h5>
+                            <p>Esto hace que tus clientes quieran consumir y que les guste leer la información de tu sitio web</p>
                         </button>
                         <button onclick="changeGrid(this, 4)">
-                            <h4>Contenido 4</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Redes Sociales</h5>
+                            <p>Pueden servir como medio de comunicación y como estrategia de posicionamiento</p>
                         </button>
                         <button onclick="changeGrid(this, 5)">
-                            <h4>Contenido 5</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Blog</h5>
+                            <p>Es una herramienta informativa que ayuda a los clientes y ofrece más tiempo en el que el cliente se quede en el sitio web</p>
+                        </button>
+                        <button onclick="changeGrid(this, 6)">
+                            <h5>Contacto con el cliente</h5>
+                            <p>Es elemental y básico que haya esta retroalimentación con el cliente</p>
                         </button>
                     </div>
-                    <div id="mButtonList">
+                    <div id="vButtonList">
                         <button onclick="changeGrid(this, 1)">
-                            <h4>Contenido 1</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Posicionamiento</h5>
+                            <p>Permiten lograr una mayor visibilidad.</p>
                         </button>
                         <button onclick="changeGrid(this, 2)">
-                            <h4>Contenido 2</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Publicidad</h5>
+                            <p>Da a conocer tus productos a tus clientes</p>
                         </button>
                         <button onclick="changeGrid(this, 3)">
-                            <h4>Contenido 3</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Estrategias de Marketing</h5>
+                            <p>Aumenta tus ventas</p>
                         </button>
                         <button onclick="changeGrid(this, 4)">
-                            <h4>Contenido 4</h4>
-                            <p>Descripción del Contenido</p>
-                        </button>
-                        <button onclick="changeGrid(this, 5)">
-                            <h4>Contenido 5</h4>
-                            <p>Descripción del Contenido</p>
+                            <h5>Plataformas</h5>
+                            <p>Herramientas que te ayudarán en el desarrollo de tu sitio web</p>
                         </button>
                     </div>
                     <div class="reco-grid">
                         <div id="pGrid">
                             <div id="p1">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Alójala en un buen servidor:</strong> si el servidor no es adecuado hace que la carga demore, lo que causa una mala experiencia con tu usuario. Un buen servidor permite manejar un gran número consultas a la vez, como <a href="https://httpd.apache.org/" target="_blank">Apache</a> o <a href="https://www.nginx.com/">Nginx</a>.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2017/05/25/01/03/web-page-2341973_1280.jpg" alt="">
+                                    <p><strong>Utiliza un código optimizado:</strong> puedes estructurar tu código en varias partes o puedes orientarlo a objetos. Escoge e importa solamente las librerías que te sirvan para ahorrar memoria.</p>
+                                </div>
+                                <div class="card">
+                                    <div class="image-pair">
+                                        <img src="https://cdn.pixabay.com/photo/2020/10/04/04/44/loading-5625228_1280.png" alt="">
+                                        <img src="https://i.postimg.cc/vZSM9nHv/random-text.png " alt="">
+                                    </div>
+                                    <!-- https://postimg.cc/delete/7djDNVm8/2c191a92 -->
+                                    <p><strong>Mantenla limpia y amigable:</strong> demasiadas animaciones, imágenes y texto desaniman a tu usuario por su carga lenta. Mientras que un sitio web que no esté sobrecargado, puede hacer que tu web sea más rápido y atractivo.</p>
                                 </div>
                             </div>
                             <div id="p2">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://images.pexels.com/photos/590045/pexels-photo-590045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 " alt="">
+                                    <p><strong>Haz seguimiento:</strong> es importante para que tomes decisiones de mejora. Por ejemplo, si tienes una empresa de venta de ropa puedes ver qué diseños son los más visitados, entonces, le pones mayor énfasis para que más clientes accedan.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://i.postimg.cc/h4bscrY3/google-analytics.png" alt="">
+                                    <!-- https://postimg.cc/delete/tcDkTf1q/32956fb8 -->
+                                    <p><strong>Utiliza análisis de datos:</strong> esto se hace a través de analíticas de datos que permiten hacer un seguimiento, por lo que se trabaja al interno y se pueden usar herramientas como <a href="https://marketingplatform.google.com/intl/es/about/analytics/" target="_blank">Google Analytics</a>.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/7876507/pexels-photo-7876507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Si es necesario, especialízate:</strong> porque te permite solucionar los problemas de tu negocio a través de la explotación de datos y construcción de sistemas de información para <i>business intelligence</i>.</p>
                                 </div>
                             </div>
                             <div id="p3">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Trabaja colaborativamente:</strong> un grupo de personas que puedan gestionar y responsabilizarse de la página es lo ideal, muchas veces se comete el error de que todo el mundo lo gestione, lo cual genera desorden. Sin embargo, si no tienes acceso a tener un equipo puedes hacerlo tú mismo.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/955395/pexels-photo-955395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Mantén tu página actualizada:</strong> brinda orden, credibilidad, y satisfacción.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/97080/pexels-photo-97080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Gestiona tu página tú mismo:</strong> cuenta con un panel administrativo, ya que, si un texto, banner o teléfono de contacto cambia, no tendrás que recurrir a un programador, sino puedes ingresar al panel que te permitiría cambiarlo fácilmente.</p>
                                 </div>
                             </div>
                             <div id="p4">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://cdn.pixabay.com/photo/2016/08/13/16/49/computer-1591018_1280.jpg" alt="">
+                                    <p><strong>Brinda respaldo de seguridad:</strong> en especial por las situaciones actuales, ya que una página puede ser clonada o infiltrada. Puedes realizar copias de seguridad de tu sitio web, aunque muchos servidores tienen excelente seguridad.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2019/06/25/21/37/stamp-4299143_1280.jpg" alt="">
+                                    <p><strong>Cuida la privacidad:</strong> al momento de publicar información, datos, entre otros, que sean confidenciales, y también en caso el usuario requiera mantener anónimas sus publicaciones.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/164501/pexels-photo-164501.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Comercio en línea (?):</strong> brinda seguridad cuando se paga a través de tarjeta de crédito o débito, puedes adquirir servicios de pasarelas de pago. Puedes usar <a href="https://culqi.com/" target="_blank">Culqi</a>, <a href="https://www.mercadopago.com/" target="_blank">Mercado Pago</a>, <a href="https://www.paypal.com/" target="_blank">PayPal</a>, <a href="https://payu.com/" target="_blank">PayU</a>, <a href="https://pagoefectivo.pe/">PagoEfectivo</a>, <a href="https://pay-me.com/" target="_blank">PayMe</a>, <a href="https://www.niubiz.com/" target="_blank">Niubiz</a>, entre otros.</p>
                                 </div>
                             </div>
                             <div id="p5">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://cdn.pixabay.com/photo/2017/07/22/11/09/social-media-2528410_1280.jpg" alt="">
+                                    <p><strong>Web adaptable (?):</strong> hay código manejable internamente que ayuda a que tu página sea visible en distintos dispositivos y navegadores que utilicen tus usuarios, sin tener la necesidad de descargar o instalar alguna aplicación, como los <a href="https://developer.mozilla.org/es/docs/Web/CSS/Media_Queries/Using_media_queries/" target="_blank">Media Queries</a> o los <a href="https://developer.mozilla.org/es/docs/Glossary/Vendor_Prefix/" target="_blank">Prefijos de Vendedor</a> (vendor prefixes).</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2014/11/29/19/21/social-media-550767_1280.png" alt="">
+                                    <p><strong>Lenguaje estándar (?):</strong> pues tal vez no es compatible con otras computadoras, por ello debe ser diseñado y desarrollado para la navegación desde cualquier dispositivo y resolución de pantalla. Es importante para conseguir más usuarios.</p>
                                 </div>
                             </div>
                         </div>
                         <div id="dGrid">
                             <div id="d1">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://cdn.pixabay.com/photo/2015/11/10/14/26/box-1036976_1280.png" alt="">
+                                    <p><strong>Incluye contenido importante:</strong> mantén un diseño simple o incluso minimalista, lo que debe venderse es el producto, no el diseño. Las páginas no son para que los diseñadores se luzcan.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/5428829/pexels-photo-5428829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Haz que tu navegación sea simple (?):</strong> en algunas páginas es muy complicado, ya que el diseño es bueno pero las personas no lo usarían por no tener conocimientos sobre web.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/5797903/pexels-photo-5797903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Procura que sea doblemente amigables (?):</strong> algunos clientes tienen dificultades o poca educación digital, además tienen un poco de miedo a los sitios web por la exposición de su información personal.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://i.postimg.cc/mDh7KN2B/styles.png" alt="">
+                                    <!-- https://postimg.cc/delete/wSRhz4FN/9c5ebcdc -->
+                                    <p><strong>Utiliza un solo estilo:</strong> si hay una sección con estilo diferente, el usuario no entiende qué pasó, se puede distraer e irse del sitio web. El estilo es la identidad de un sitio web y debe tenerse en cuenta.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://i.postimg.cc/g00nSzNZ/space.png" alt="">
+                                    <!-- https://postimg.cc/delete/XtrpTG71/64922f7b -->
+                                    <p><strong>Respetar los espacios:</strong> que no sea muy recargado. Esto afecta mucho la estética del sitio web.</p>
                                 </div>
                             </div>
                             <div id="d2">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/17/46/user-interface-1655006_1280.png" alt="">
+                                    <p><strong>Presta atención al diseño de interfaces:</strong> lo que necesitan tus clientes para poder llegar a comprar, revisar, reenviar, compartir, está relacionado a que gráficamente sea cómodo.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Utiliza analítica:</strong> para que sea lógico se necesita mucho análisis, pruebas, y pensamiento. Piensa en que el cliente debe tener claro cómo hacer lo mínimo posible para llegar a lo que busca.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2017/09/29/23/44/feedback-2800867_1280.png" alt="">
+                                    <p><strong>Ten en cuenta la exigencia del cliente:</strong> en estos tiempos son muy exigentes, así que el resolver la experiencia de usuario con un buen diseño de interfaces hace que una página pueda llegar a un objetivo bueno, fácil y manera exitosa.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://i.postimg.cc/4xXFKqxd/simple.png " alt="">
+                                    <!-- https://postimg.cc/delete/YZCy1kbz/eb0ab54a -->
+                                    <p><strong>No le des muchos detalles a tu página:</strong> mientras la información sea concreta y directa, la navegación será sencilla y amigable.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2012/04/05/02/02/cursor-25900_1280.png" alt="">
+                                    <p><strong>Basa todo en solo tres clics:</strong> está comprobado que si un usuario, con solo tres clics, obtiene lo que necesita, entonces estará mucho más satisfecho. Sin embargo, todo depende de la necesidad de una empresa, ya que para vender pueden ser necesarios más de 3 clics.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2017/05/14/03/45/gui-2311260_1280.png" alt="">
+                                    <p><strong>Haz la información accesible:</strong> la información debe ser encontrada de la manera más sencilla y rápida. Aun así, todo depende del sitio web, uno puede organizar categorías eficientes o implementar un buscador interno (enlace).</p>
+                                </div>
+                                <div class="card">
+                                    <div id="navBar">
+                                        <p>Logo</p>
+                                        <ul>
+                                            <li>Inicio</li>
+                                            <li>Productos</li>
+                                            <li>Contacto</li>
+                                        </ul>
+                                    </div>
+                                    <p><strong>Utiliza una barra de navegación eficiente:</strong> puede ser atractiva y sobresaliente. Debe ser útil para navegar, lo ideal es que tome &#188 de página.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://i.postimg.cc/HkxXh1YF/buttons.png " alt="">
+                                    <!-- https://postimg.cc/delete/h6JVWPsj/1a0c2f01 -->
+                                    <p><strong>Usa botones claros y fáciles de encontrar:</strong> esto garantiza que el cliente identifique que un botón es real y puede realizar su función sin problemas.</p>
                                 </div>
                             </div>
                             <div id="d3">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://images.pexels.com/photos/40799/paper-colorful-color-loose-40799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Usa una buena combinación de colores:</strong> ya que puede ser atractivo, pero podría ocasionar obstrucciones o dificultades en la lectura de la información. Puedes guiarte usando <a href="https://colorhunt.co/" target="_blank">ColorHunt</a>, <a href="https://color.adobe.com/es/create/color-wheel/" target="_blank">Adobe Color</a> o <a href="https://coolors.co/" target="_blank">Coolors</a>.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/1148496/pexels-photo-1148496.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Utiliza colores atractivos:</strong> pero no neones ni fosforescentes. Deben representar la identidad, pero no ser muy fuertes, por ello, lo más recomendable, hoy en día, son los colores pasteles. Puedes ver ejemplos de los colores de marcas exitosas <a href="http://brandcolors.net/" target="_blank"> aquí</a>.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://i.postimg.cc/x1Zkckv1/design.png" alt="">
+                                    <!-- https://postimg.cc/delete/5ThHv5V5/88759f67 -->
+                                    <p><strong>Crea una línea gráfica:</strong> haz que tus elementos tengan características en común como bordes, colores, tipografías, o efectos. La estética debe ser suficiente para que el usuario no opte por otro sitio web y pueda distinguirte por tu línea gráfica. Puedes generar paletas en <a href="https://javier.xyz/cohesive-colors/" target="_blank">Cohesive Colors</a>, <a href="https://www.color-hex.com/" target="_blank">Color Hex</a> o <a href="https://www.colorhexa.com/" target="_blank">Color Hexa</a>.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://i.postimg.cc/rpHBrTsT/colors.png" alt="">
+                                    <!-- https://postimg.cc/delete/TBzzqw7W/af906f50 -->
+                                    <p><strong>Usa pocos colores:</strong>es más sencillo tener una identidad con pocos elementos que tener muchas opciones y marear al cliente, al usuario y a todos.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2017/12/28/15/06/geometric-3045402_1280.png" alt="">
+                                    <p><strong>Adecúa tus colores según tus clientes y productos (?):</strong> en una página formal son mejores colores obvios como grises, azules, o negros, mientras que en una página de entendimiento se pueden usar colores vivos como los colores básicos. Puedes generar una paleta de acuerdo con una imagen <a href="http://colrd.com/" target="_blank">aquí</a>.</p>
                                 </div>
                             </div>
                             <div id="d4">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Adáptalo a todos los dispositivos:</strong> para ganar clientes en cualquier celular o incluso televisores. Puedes comprobar si tu sitio web es responsivo en <a href="https://ui.dev/amiresponsive" target="_blank">Am I Responsive?</a> o <a href="http://www.responsinator.com/" target="_blank">Responsinator</a>.</p>
+                                </div>
+                                <div class="card">
+                                    <div class="image-pair">
+                                        <img src="https://i.postimg.cc/sDVKJLtZ/little-text.png" alt="">
+                                        <!-- https://postimg.cc/delete/PcqKFH83/7bedefd4 -->
+                                        <img src="https://images.pexels.com/photos/8296105/pexels-photo-8296105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    </div>
+                                    <p><strong>Tómalo en cuenta siempre:</strong>si no es responsivo, la letra sería muy pequeña y la tasa de rebote será muy alta. Lo que ves en una computadora no lo puedes ver en el celular. La mayoría de las plataformas y herramientas de sitios web ofrecen esta función. También podrás evitar hacer otras plataformas como apps para los celulares.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/38519/macbook-laptop-ipad-apple-38519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Evalúa según tu presupuesto, tiempo y recursos: </strong>piensa en lo que es necesario y deja de hacer tareas que demanden muchos recursos en algunos tipos de equipos.</p>
                                 </div>
                             </div>
                             <div id="d5">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://images.pexels.com/photos/616849/pexels-photo-616849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Usa solo dos o tres opciones de tipografías:</strong> más opciones pueden confundir al cliente.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://i.postimg.cc/D0mr9VFC/fonts.png" alt="">
+                                    <!-- https://postimg.cc/delete/tKndpqtp/2e19cc91 -->
+                                    <p><strong>Varíala según el cliente y el producto:</strong> En una página formal se usan fuentes como Arial, o Impact, en una página de entendimiento, se puede Sans Serif. Cambia de acuerdo con la temática de tu empresa (?).</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://i.postimg.cc/MZRVjYHf/fonts2.png " alt="">
+                                    <!-- https://postimg.cc/delete/04GDGBWt/41e6ed87 -->
+                                    <p><strong>No te compliques:</strong> hay infinidad de tipografías, entre ellas, Verdana y Calibri que son las que más se utilizan. Solo tienes que asegurarte de que tengan un tamaño que te permita entender el texto que estás colocando.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/10412821/pexels-photo-10412821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>No uses letras muy pequeñas:</strong> esto dificulta la lectura, y, por ende, al cliente. Puedes encontrar diversas tipografías para incluir en tu sitio web en <a href="https://fonts.google.com" target="_blank">Google Fonts</a>.</p>
+                                </div>
+                            </div>
+                            <div id="d6">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2015/02/13/00/43/apples-634572_1280.jpg" alt="">
+                                    <p><strong>Haz que tus fotos tengan un propósito claro:</strong> pueden hacer que tu cliente sepa lo que necesita. Se pueden brindar más detalles, como texturas. No podemos usar una foto opaca, oscura o que no tenga razón de ser con la información del sitio web.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/08/20/06/09/video-1606945_1280.png" alt="">
+                                    <p><strong>Usa videos cortos preferentemente:</strong> los que complementen o muestren la información y vendan tu producto, pues generan la atención del cliente. Actualmente, el video es muy útil en las redes sociales ya que lo movilizan mucho mejor. Puedes elaborar videos animados gratuitos para publicaciones en Youtube en <a href="https://www.powtoon.com/" target="_blank">Powtoon</a> (?).</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Usa buen material gráfico:</strong> como buenas fotos o ilustraciones que presenten de manera novedosa un tu sitio web, que estén bien tomadas y capturadas, y que generen atención, lógicamente respetando los derechos de autor y uso. Así puedes sobresalir en cuanto al resto de los sitios web. Puedes usar fotografías e imágenes sin derechos de uso, <i>como lo hice yo,</i> en <a href="https://www.pexels.com/" target="_blank">Pexels</a>, <a href="https://pixabay.com/" target="_blank">Pixabay</a> y <a href="https://unsplash.com" target="_blank">Unsplash</a>.</p>
+                                </div>
+                            </div>
+                            <div id="d7">
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/1340389/pexels-photo-1340389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Ten en cuenta tus elementos gráficos:</strong> son muy importantes, incluyen: íconos, colores, texto, información, formas, entre otros.</p>
+                                </div>
+                                <div class="card">
+                                    <div id="border-demo">
+                                        <div>Cuadrado</div>
+                                        <div>Circular</div>
+                                    </div>
+                                    <p><strong>Usa distintas formas geométricas:</strong> ya que tienen un lenguaje: algo cuadrado indica algo recto y sólido y algo curvo o circular es mucho más dinámico.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg" alt="">
+                                    <p><strong>Haz una diagramación:</strong> es muy importante pues ayuda a distribuir de manera simétrica cada elemento dentro del sitio web, garantizando una buena impresión en el usuario.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/814822/pexels-photo-814822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Usa imágenes para atraer:</strong> pues estas ayudan mucho como soporte para garantizar que el usuario se quede en tu sitio web.</p>
+                                </div>
+                            </div>
+                            <div id="d8">
+                                <div class="card">
+                                    <div id="background-demo">
+                                        <div>Producto</div>
+                                    </div>
+                                    <p><strong>No le des importancia al fondo:</strong> no se necesita uno llamativo pues el producto debe ser la estrella de la foto. La mayoría de los fondos son neutros, blancos o negros. Puede ser una foto muy artística, pero si el producto no se ve bien, no tendrá éxito.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/56759/pexels-photo-56759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Trabaja en la postproducción:</strong> se puede hacer que un producto se vea limpio, ordenado y sin golpes.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2020/12/11/18/05/camera-5823430_1280.jpg" alt="">
+                                    <p><strong>Toma en cuenta en dónde se usará:</strong> en redes o catálogos en internet, una fotografía puede tomarse con cámara de celular si no se requiere de mayor tamaño. Si es impresa o para paredes, puede requerir una cámara de mayor resolución.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/30/19/10/ecommerce-1706103_1280.png" alt="">
+                                    <p><strong>Haz que el cliente pueda ver cómo se usa el producto:</strong> ya que a este le gusta imaginar cómo se va a ver y cómo se va a sentir al usarlo. Esto debe estar proyectado en la fotografía, alguien puede mostrar que está disfrutando usar tu producto.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2019/04/26/07/14/store-4156934_1280.png" alt="">
+                                    <p><strong>Ten claro qué quieres lograr:</strong> es vital pensar lo que tu cliente sentirá cuando lo vea, porque hay producción, maquillaje, fotógrafos (?), postproducción e incluso diseño. Orienta todos aspectos según el objetivo de la fotografía. </p>
+                                </div>
+                                <div class="card">
+                                    <div class="image-pair">
+                                        <img src="https://i.postimg.cc/RCWgMFLL/social-networks.png " alt="">
+                                        <!-- https://postimg.cc/delete/HNy6j5TG/97f195f6 -->
+                                        <img src="https://i.postimg.cc/jS3WdsXy/printer.png " alt="">
+                                        <!-- https://postimg.cc/delete/S33XXXy5/859f7c59 -->
+                                    </div>
+                                    <p><strong>Basa los formatos según en dónde se publicará:</strong> en redes, 1200 por 1200 pixeles es lo adecuado. Para impresiones, 20 megapíxeles están bien. En una imagen de cámara profesional se puede bajar la resolución de una fotografía para adecuarla a distintos medios de publicación.</p>
+                                </div>
+                            </div>
+                            <div id="d9">
+                                <div class="card">
+                                    <img src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                                    <p>Utiliza catálogos en línea para recopilar tus productos y sus precios fácilmente. Puedes aprender a hacerlos en <a href="https://canva.com" target="_blank">Canva</a>, mediante un <a href="https://youtu.be/AYCE-3OnGQI" target="_blank">tutorial</a>.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.unsplash.com/photo-1514679725149-ecaa6013d817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                                    <p><strong>Dales organización a los temas:</strong> usa colores acordes (?) a la identidad de tu empresa, tamaños y contrastes para asegurarte de que el cliente sepa qué es exactamente lo que está observando. </p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.unsplash.com/photo-1542125363-a877c094f8dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                                    <p><strong>Usa letras legibles:</strong> para facilitar una lectura cómoda y que el cliente no se pierda ningún detalle ni que tenga que ampliar demasiado las páginas en caso de ver un catálogo virtual.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.unsplash.com/photo-1627395410076-15da6119fff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=422&q=80" alt="">
+                                    <p><strong>Ten en cuenta la comodidad de la lectura:</strong> ya que una página no debe tener cambios drásticos según la página anterior. Un cambio de página no debe dar la impresión de un golpe para el usuario.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2015/02/22/17/56/loading-645268_1280.jpg" alt="">
+                                    <p><strong>Haz que tenga un tamaño adecuado si es en línea:</strong> así los usuarios podrán acceder a este catálogo con facilidad. Los usuarios están acostumbrados a recibir sus productos de una manera rápida.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+                                    <p><strong>Utiliza plataformas para compartir catálogos digitales:</strong> para difundirlo, Instagram y Facebook ayudan a conseguir más clientes. También puedes promocionarlo en herramientas dedicadas como <a href="https://www.ecwid.com/es">Ecwind</a> (gratuita).</p>
                                 </div>
                             </div>
                         </div>
                         <div id="cGrid">
                             <div id="c1">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://cdn.pixabay.com/photo/2016/03/21/23/25/link-1271843_1280.png" alt="">
+                                    <p><strong>Utiliza atajos o enlaces a otras páginas para seguir navegando:</strong> pues permitirán que el usuario llegue rápido a la información que necesite.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2014/04/02/10/13/menu-303121_1280.png" alt="">
+                                    <p><strong>Usa una barra de navegación o menú:</strong> la estructura de tu sitio web debe estar visible, brinda categorías por tipo de productos y/o servicios para que el cliente pueda acceder a ellos fácilmente.</p>
+                                </div>
+                                <div class="card">
+                                    <div id="banners">
+                                        <div>Imagen</div>
+                                        <div>Banner (<a>Enlace</a>)</div>
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </div>
+                                    <p><strong>Usa banners:</strong> así podrás mostrar la información en gráficos y textos. Debido a que estos son movilizados utilizando animaciones, generarán buena impresión en el usuario.</p>
+                                </div>
+                                <div class="card">
+                                    <div id="headers">
+                                        <div>Logo</div>
+                                        <div>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                            </ul>
+                                            <div>Navegación</div>
+                                        </div>
+                                    </div>
+                                    <p><strong>Añade un encabezado:</strong> debe estar en la parte superior para que siempre esté visible, asegúrate que contenga botones de inicio, información y testimonios.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/267669/pexels-photo-267669.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Usa un lenguaje amigable para la información:</strong> su terminología no debe ser complicada para asegurar la comprensión de más clientes.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/11/13/04/52/statistic-1820320_1280.png" alt="">
+                                    <p><strong>Llama la atención:</strong> el cliente no debe aburrirse en tu página, debe encontrar un balance entre la información y las imágenes. Lo importante es centralizar lo que uno quiere mostrar.</p>
                                 </div>
                             </div>
                             <div id="c2">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://images.pexels.com/photos/5650026/pexels-photo-5650026.jpeg" alt="">
+                                    <p><strong>Usa frases de empresas de marketing:</strong> como “Regístrate gratis”, “Plan gratuito”, “Un mes gratis”, “Promociones”, “Ofertas”, “Últimos diez suscriptores”, “50% de descuento para los primeros diez suscriptores”.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Incita a tu usuario a actuar:</strong> llama a tu cliente a que haga algo rápidamente.</p>
+                                </div>
+                                <div class="card">
+                                    <div id="pop-ups">
+                                        <h3>Pop-up</h3>
+                                        <p>Información (<a>enlace</a>)</p>
+                                        <img class="banner-close" src="https://i.postimg.cc/8kvg6Pzf/cross.png" alt="cross">
+                                        <!-- https://postimg.cc/delete/qFsHX6jm/c18f5c9d -->
+                                    </div>
+                                    <p><strong>Usa pop-ups o banners:</strong> que sean pequeños, pero no invasivos. Agrégales tags o notas informativas útiles para el cliente, pues son muy llamativos y se pueden usar para vender.</p>
+                                </div>
+                                <div class="card">
+                                    <div class="image-pair">
+                                        <img src="https://cdn.pixabay.com/photo/2012/04/11/00/06/filter-27229_1280.png" alt="">
+                                        <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    </div>
+                                    <p><strong>Añade un buscador interno:</strong> permite que el sitio web pueda ser más fácil de recorrer ya que organiza la información, permite al cliente filtrar y encontrar lo que busca en el menor tiempo posible, con eso se irá satisfecho. Estos están incluidos como funciones en las herramientas para hacer sitios web.</p>
+                                </div>
+                                <div class="card">
+                                    <div class="image-pair">
+                                        <img src="https://images.pexels.com/photos/106341/pexels-photo-106341.jpeg" alt="">
+                                        <img src="https://cdn.pixabay.com/photo/2015/12/11/09/30/mobile-phone-1087845_1280.jpg" alt="">
+                                    </div>
+                                    <p><strong>No le quites importancia a los buscadores externos:</strong> un cliente preferirá un buscador externo como Google, por ello, debes darle importancia ya que este consigue el mayor número de clientes. Pero una vez que el cliente esté dentro del sitio, se puede colocar un buscador interno para que el usuario pueda encontrar la información de su interés sin requerir un buscador externo de nuevo.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2013/07/12/14/48/search-148820_1280.png" alt="">
+                                    <p><strong>Puedes usar un botón de búsqueda:</strong> para hacer más compacto al buscador interno. Toda página debe tener un buscador que permita ubicar la información.</p>
                                 </div>
                             </div>
                             <div id="c3">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://cdn.pixabay.com/photo/2016/06/26/23/32/information-1481584_1280.png" alt="">
+                                    <p><strong>Brinda información para los clientes:</strong> debe ser corta, precisa, interesante, útil y verificable (debido a los casos de información falsa).</p>
+                                </div>
+                                <div class="card">
+                                    <div class="image-pair" id="pixelate">
+                                        <img src="https://i.postimg.cc/tJY6wcBs/pixelate.png" alt="">
+                                        <!-- https://postimg.cc/delete/SBz844xV/13e2d158 -->
+                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+
+                                    </div>
+                                    <p><strong>Haz un balance:</strong> muchas veces si uno da mucha información o imágenes con poca calidad el cliente se aburre. Se debe poner una buena perspectiva de lo que quieres mostrar en tu sitio web.</p>
                                 </div>
                             </div>
                             <div id="c4">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://cdn.pixabay.com/photo/2016/08/17/04/43/template-1599667_1280.png" alt="">
+                                    <p><strong>Úsalas:</strong> dependiendo de tu público objetivo, estas pueden ser muy útiles ya que un sitio web es un importante método de difusión y ventas.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2018/11/29/21/51/social-media-3846597_1280.png" alt="">
+                                    <p><strong>Informa al usuario de más cosas:</strong> esto lo puedes lograr a través de las redes sociales. También es sumamente importante comunicarse y contactarse antes de concertar una compra, si es posible.</p>
+                                </div>
+                                <div class="card">
+                                    <div id="social-networks">
+                                        <img src="https://cdn.pixabay.com/photo/2017/12/06/04/56/facebook-3000954_1280.png " alt="">
+                                        <img src="https://cdn.pixabay.com/photo/2017/03/24/07/28/whatsapp-2170427_1280.png " alt="">
+                                        <img src="https://cdn.pixabay.com/photo/2016/12/04/18/58/instagram-1882330_1280.png" alt="">
+                                    </div>
+                                    <p><strong>Hazlas accesibles:</strong> si tu cliente quiere ver más, solo con un clic puede ver todo lo que aportas para él. Puedes implementar botones para poder enlazar a estas redes sociales.</p>
                                 </div>
                             </div>
                             <div id="c5">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://cdn.pixabay.com/photo/2014/10/17/11/53/blog-492184_1280.jpg" alt="">
+                                    <p><strong>Publica artículos:</strong> pueden tratarse de artículos de tu empresa, nuevos productos, innovaciones del sector que estás vendiendo, las ventajas de tus productos, entre otros. Todo esto debe ser verdadero, por supuesto, ya que la información falsa es identificable (?).</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2014/02/13/07/28/wordpress-265132_1280.jpg" alt="">
+                                    <p><strong>Estudia la coyuntura:</strong> de forma que sepas la situación en la que puedas vender un producto adecuadamente. Esto podrías aplicarlo en los blogs.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2015/03/27/20/42/smartphone-695164_1280.jpg" alt="">
+                                    <p><strong>Usa información local:</strong> por ejemplo, nuestra realidad es distinta de otros países, por lo que traer información de otros países no es lo ideal.</p>
+                                </div>
+                            </div>
+                            <div id="c6">
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2017/12/17/16/08/customer-experience-3024488_1280.jpg" alt="">
+                                    <p><strong>Comunícate con tus clientes:</strong> puedes usar cuestionarios, evaluaciones de tus productos y chats.</p>
+                                </div>
+                                <div class="card">
+                                    <div id="chatbots">
+                                        <h4>Herramientas de Chat y Chatbot</h4>
+                                        <nav>
+                                            <a href="https://www.whatsapp.com/" target="_blank"><img src="https://cdn.pixabay.com/photo/2017/03/24/07/28/whatsapp-2170427_1280.png" alt=""></a>
+                                            <a href="https://www.zendesk.es/" target="_blank"><img src="https://i.postimg.cc/1XhdHjcB/zendesk.png" alt=""></a>
+                                            <!-- https://postimg.cc/delete/BrszV04G/a979dcc8 -->
+                                            <a href="https://www.snapengage.com/" target="_blank"><img src="https://i.postimg.cc/fTdQnYg1/snapengage.png" alt=""></a>
+                                            <!-- https://postimg.cc/delete/CtGpFcz1/875ee90a -->
+                                            <a href="https://www.olark.com/" target="_blank"><img src="https://i.postimg.cc/d1Fy2V2N/olark.png" alt=""></a>
+                                            <!-- https://postimg.cc/delete/KdGMJMbZ/c8d774c3 -->
+                                        </nav>
+                                    </div>
+                                    <p><strong>Ofrece un servicio de chat:</strong> por ejemplo, se puede ofrecer chat por WhatsApp, que es gratuito y dinámico. Es lo más común, aunque también hay otras herramientas de chat para empresas.</p>
+                                </div>
+                                <div class="card">
+                                    <div id="forms">
+                                        <h4>Pregunta</h4>
+                                        <div><input type="checkbox"> Opción 1</div>
+                                        <div><input type="checkbox"> Opción 2</div>
+                                        <div><input type="checkbox"> Opción 3</div>
+                                        <div><input type="checkbox"> Opción 4</div>
+                                        <div><input type="checkbox"> Opción 5</div>
+                                    </div>
+                                    <p><strong>Usa formularios concisos:</strong> ellos ayudan a que veas el nivel de competencia con otras marcas (estudio de mercado) o la satisfacción de tus clientes, pero también son algo que ellos siempre se quieren saltar. Por ello, lo ideal es que sean en alternativas múltiples, para facilitar el llenado del cliente.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2017/01/14/10/56/people-1979261_1280.jpg" alt="">
+                                    <p><strong>Utiliza los focus group:</strong> a través de la búsqueda de ciertas personas que estén interesadas o que consuman el producto. A pesar de que son un poco más difíciles de conseguir, te dan mejores resultados, pues se consiguen respuestas más sinceras y del mismo ámbito.</p>
+                                </div>
+                                <div class="card">
+                                    <div id="socialM">
+                                        <h4>Redes Sociales para contactarse</h4>
+                                        <nav>
+                                            <a href="https://www.whatsapp.com/" target="_blank"><img src="https://cdn.pixabay.com/photo/2017/01/16/17/05/whatsapp-1984584_1280.png" alt=""></a>
+                                            <a href="https://www.facebook.com" target="_blank"><img src="https://cdn.pixabay.com/photo/2015/05/17/10/51/facebook-770688_1280.png" alt=""></a>
+                                            <a href="https://www.instagram.com" target="_blank"><img src="https://cdn.pixabay.com/photo/2016/09/17/07/03/instagram-1675670_1280.png" alt=""></a>
+                                            <a href="https://www.twitter.com/" target="_blank"><img src="https://cdn.pixabay.com/photo/2017/08/23/11/30/twitter-2672572_1280.jpg" alt=""></a>
+                                            <a href="https://www.linkedin.com/" target="_blank"><img src="https://cdn.pixabay.com/photo/2017/08/22/11/56/linked-in-2668700_1280.png" alt=""></a>
+                                        </nav>
+                                    </div>
+                                    <p><strong>Brinda información de contacto:</strong> ya que da seguridad y confianza a tus clientes, de esta manera, pueden valorar y considerar a tu empresa. Puedes brindarla por WhatsApp, Facebook, Twitter u otra red social, hasta incluso en tu propio sitio web.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/11/16/06/35/question-1828268_1280.jpg" alt="">
+                                    <p><strong>Incluye una sección de ayudas o preguntas frecuentes:</strong> ya que también puede facilitar enormemente al cliente.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2018/09/17/18/07/manual-3684460_1280.jpg" alt="">
+                                    <p><strong>Usa foros:</strong> ya que estos brindan ayudas y soluciones. Un cliente puede solucionar un problema fácilmente si es que ha sido respondido previamente en un foro, siempre y cuando este esté actualizado.</p>
                                 </div>
                             </div>
                         </div>
                         <div id="vGrid">
                             <div id="v1">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://i.postimg.cc/SQcHK7pz/g-My-Business.png" alt="">
+                                    <!-- https://postimg.cc/delete/HN9F8vbZ/83c7b8bf -->
+                                    <p><strong>Haz que tus clientes te encuentren:</strong> a través de la promoción de tu empresa en herramientas como <a href="https://www.google.es/intl/es/business/" target="_blank">Google My Business</a>, que te permitirá aparecer en Google Maps cuando alguien cercano a tu posición busque tu empresa. Puedes detallar dónde se encuentra desde la página de búsqueda, qué horario tiene, hacer comentarios y oferta, gestionar reseñas y calificaciones de clientes, entre otros.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/04/13/22/42/seo-1327870_1280.png" alt="">
+                                    <p><strong>Incluye palabras clave relacionadas con tu empresa:</strong> marca esas palabras y repítelas en páginas internas, redes sociales, y más. Las palabras serán conocidas y el servicio de SEO las podrá identificar para que el sitio web pueda ser ubicado, reconocido e indexado fácilmente en buscadores como Google.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2019/09/22/16/21/big-business-4496465_1280.png" alt="">
+                                    <p><strong>Adecúa tu contenido:</strong> puedes definir bien los detalles de tu empresa y lo que quieres vender. Por ejemplo, una fecha de publicación reciente ayuda a posicionar al sitio web en los buscadores. También puedes usar enlaces secuenciales (botones de atrás/adelante o inicio/final), o palabras clave.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/327533/pexels-photo-327533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                    <p><strong>Incluye comentarios, recomendaciones, y testimonios:</strong> de personas como artistas y comunicadores. Esto puede añadirles confianza a tus clientes.</p>
                                 </div>
                             </div>
                             <div id="v2">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://cdn.pixabay.com/photo/2016/09/12/04/21/ads-1663031_1280.png" alt="">
+                                    <p><strong>Utiliza anuncios pagados:</strong> pues son una de las estrategias más efectivas en cuanto a la difusión y posicionamiento de un sitio web.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2020/04/04/04/23/media-5000790_1280.png" alt="">
+                                    <p><strong>Invierte en empresas de publicidad:</strong> el más usado es Google, también se puede invertir en otras empresas como Facebook.</p>
+                                </div>
+                                <div class="card">
+                                    <div class="image-pair">
+                                        <img src="https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                                        <img src="https://cdn.pixabay.com/photo/2019/06/19/07/13/email-4284157_1280.png" alt="">
+                                    </div>
+                                    <p><strong>Utiliza e invierte en redes sociales:</strong> ya que son un instrumento que permite la interacción e información de tu empresa de manera directa. Sin embargo, debes evaluar en qué redes sociales te conviene tener presencia de acuerdo con tu giro de negocio y tu público objetivo. Puedes aprender en qué contexto usar las redes sociales <a href="https://localiza.me/blog/guia-redes-sociales-pymes/" target="_blank">aquí</a> y <a href="https://localiza.me/blog/anunciar-local-internet/" target="_blank">aquí</a>.</p>
                                 </div>
                             </div>
                             <div id="v3">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://cdn.pixabay.com/photo/2021/03/19/13/15/bill-6107551_1280.png" alt="">
+                                    <p><strong>Adecúa tus precios y condiciones:</strong> estos deben causar que el producto llegue fácilmente al cliente. Muchas veces uno no compraba en el exterior, porque era carísimo, ahora los precios se redujeron, atrayendo a clientes. Puedes variarlo según la especialidad de tu sitio web.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2019/04/29/16/10/connection-4166469_1280.png" alt="">
+                                    <p><strong>Ten la mayor información posible:</strong> entiende a quién le vendes, qué vendes y cómo lo vendes. Muchas veces pequeñas empresas se enfocan en lo de afuera, no lo de adentro, debes entender el mercado, cliente, necesidad, qué compra, qué no, para qué, por qué y cómo.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241_1280.jpg" alt="">
+                                    <p><strong>No siempre armes un negocio pensando en cosas gratuitas (?):</strong> ya que estarías entre paredes, la funcionalidad no sería la misma si se compra en realidad un producto al completo. Esto se vería reflejado en el tiempo.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2018/02/12/14/01/devops-3148408_1280.jpg" alt="">
+                                    <p><strong>Dedícale tiempo a tu proyecto:</strong> siempre intenta añadir mejoras o recibir sugerencias de tus clientes para implementarlas. Puedes tomar en cuenta los MVP, producto viable mínimo en sus siglas en inglés, que es lo mínimo que una empresa necesita para mantenerse.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/concept-1868728_1280.jpg" alt="">
+                                    <p><strong>Ten en cuenta qué vender antes de pensar cómo venderlo:</strong> mucha gente invierte en el producto y después piensa cómo venderlo. Si piensas antes qué vender puedes desarrollar un producto que puedes perfeccionar en el futuro. Se puede tomar en cuenta un caso de negocio o un modelo a seguir.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg" alt="">
+                                    <p><strong>Haz que tu sitio recuerde la información que se ha introducido:</strong> por ejemplo, debe recordar los productos de un carrito de compras en caso el cliente se salga por error. Puedes implementarlo mediante las herramientas que te ofrecen las plataformas para hacer sitios web, aunque a veces son funciones premium.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_1280.jpg" alt="">
+                                    <p><strong>Haz que sea para todos:</strong> haz que se vea en cualquier plataforma o dispositivo y para cualquier persona. Por ejemplo, para personas con discapacidad sensorial puedes implementar un servicio de lectura y audio mediante las herramientas en las plataformas para hacer sitios web.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2016/08/20/06/44/e-commerce-1606962__340.png" alt="">
+                                    <p><strong>Incluye un carrito de compras:</strong> haz que sea intuitivo pues es necesario para que tus clientes puedan realizar la compra sin trabas ni demoras. Estos también son ofrecidos por las plataformas para hacer sitios web.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2017/03/19/10/49/friendship-2156174_1280.jpg" alt="">
+                                    <p><strong>Haz que tus clientes se queden:</strong> es muy importante ya que esto se traduce en fidelidad, una buena experiencia de usuario y la comprensión de la información.</p>
                                 </div>
                             </div>
                             <div id="v4">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://i.postimg.cc/vmkzMp7f/freepik.png" alt="">
+                                    <!-- https://postimg.cc/delete/KdSNzZbW/9695bd37 -->
+                                    <p><strong>Elementos visuales:</strong> <strong>Freepik</strong> ofrece una gama de elementos gráficos y a veces ideas para hacer sitios web. Puede complementar el sitio web fácilmente.</p>
                                 </div>
-                            </div>
-                            <div id="v5">
                                 <div class="card">
-                                    <img src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" alt="">
-                                    <p>Ten un buen servidor. Esto es muy importante pues (dar razones, razones y más razones, así como opiniones, tips, consejos, sugerencias, recomendaciones, etc. incluyendo enlaces y ejemplos prácticos).</p>
+                                    <img src="https://i.postimg.cc/LXF1xRBC/google-scholar.png " alt="">
+                                    <!-- https://postimg.cc/delete/PBTw9NTd/07afd68c -->
+                                    <p><strong>Información:</strong> <strong>Google Académico</strong> es una versión de Google que está orientado a la búsqueda de información científica y académica.</p>
+                                </div>
+                                <div class="card">
+                                    <div class="image-trio">
+                                        <img src="https://i.postimg.cc/RVds6vVc/platzi.png" alt="">
+                                        <!-- https://postimg.cc/delete/mqXXQtVJ/633d9aa7 -->
+                                        <img src="https://i.postimg.cc/sxkdh6Rh/coursera.png" alt="">
+                                        <!-- https://postimg.cc/delete/qVfTVxf2D/367e2a38 -->
+                                        <img src="https://i.postimg.cc/hPmqBB9b/youtube.png " alt="">
+                                        <!-- https://postimg.cc/delete/L7tM6XMc/617fd7bb -->
+                                    </div>
+                                    <p><strong>Cursos:</strong> hay muchas fuentes confiables que permiten capacitarse o especializarse. Algunas son <strong><a href="https://www.platzi.com/" target="_blank">Platzi</a></strong>, <strong><a href="https://www.coursera.com/">Coursera</a></strong> y <strong><a href="https://www.youtube.com/" target="_blank">Youtube</a></strong>.</p>
+                                </div>
+                                <div class="card">
+                                    <div class="image-pair">
+                                        <img src="https://i.postimg.cc/SNYRjxGP/wix.png" alt="">
+                                        <!-- https://postimg.cc/delete/Ctk58qFL/78164d16 -->
+                                        <img src="https://i.postimg.cc/bvpw6HjX/wordpress.png" alt="">
+                                        <!-- https://postimg.cc/delete/cP4LPkfr/572f8a1a -->
+                                    </div>
+                                    <p><strong>Sitios web de herramientas online:</strong> ofrece información como códigos, sugerencias, consejos para desarrollar, entre otros. Se debe buscar el sitio web de <strong>la herramienta que estés usando</strong>, como los de Wix o WordPress si es que los usas.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="https://cdn.pixabay.com/photo/2017/01/18/10/01/cloud-computing-1989339_1280.png" alt="">
+                                    <p>Hoy en día es mucho más sencillo desarrollar debido al internet y al intercambio de conocimientos. Siempre se debe tener una activa búsqueda de información.</p>
                                 </div>
                             </div>
                         </div>
@@ -593,16 +1063,29 @@
             <li>Mario R.</li>
         </ul>
         <h3>Imágenes:</h3>
-        <p>Las imágenes provienen de <a href="https://www.pexels.com/">Pexels</a> y <a href="https://pixabay.com/">Pixabay</a>, plataformas que ofrecen imágenes sin derechos de uso.</p>
+        <p>Las imágenes provienen de <a href="https://www.pexels.com/" target="_blank">Pexels</a>, <a href="https://pixabay.com/" target="_blank">Pixabay</a> y <a href="https://unsplash.com" target="_blank">Unsplash</a>, plataformas que ofrecen imágenes sin derechos de uso.</p>
         </div>
     </section>
     <div class="banner" id="banner">
         <div class="banner-content">
             <h3 class="banner-element">Encuesta</h3>
-            <p class="banner-element">Por favor, cuando termine su visita responda la siguiente encuesta <a href="https://forms.office.com/r/jtJ4B4SC2z" target="_blank">aquí</a>.</p>
-            <img class="banner-close" src="https://i.postimg.cc/8kvg6Pzf/cross.png" alt="cross" onclick="closeBanner()">
-            <!-- https://postimg.cc/delete/qFsHX6jm/c18f5c9d -->
+            <p class="banner-element">Por favor, cuando termines tu visita responde la siguiente encuesta <a href="https://forms.office.com/r/jtJ4B4SC2z" target="_blank">aquí</a>.</p>
+            <i class="fa fa-times banner-close" aria-hidden="true" onclick="closeBanner()"></i>
         </div>
+    </div>
+    <div id="bannerShow" onclick="showBanner()">
+        <button>
+            <img id="bannerShowImg"src="https://i.postimg.cc/pTkv0TXZ/down-arrow.png" alt="up-arrow">
+            <!-- Removal link: https://postimg.cc/delete/V3Zw2tDP/1e500b4f -->
+            <p>Encuesta</p>
+        </button>
+    </div>
+    <div id="tipsShow" onclick="showTips()">
+        <button>
+            <p>10 tips</p>
+            <img id="tipsShowImg"src="https://i.postimg.cc/pTkv0TXZ/down-arrow.png" alt="up-arrow">
+            <!-- Removal link: https://postimg.cc/delete/V3Zw2tDP/1e500b4f -->
+        </button>
     </div>
     <footer>
         <div class="footer-wrapper">
