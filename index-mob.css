@@ -110,6 +110,7 @@ body {
     height: auto;
     width: 90vw;
     transform: scale(1.25);
+    max-height: 70vh;
 }
 #mainTips h3 {
     padding-bottom: 48px;
