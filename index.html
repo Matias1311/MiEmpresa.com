@@ -12,8 +12,8 @@
     <!-- https://postimg.cc/delete/8q73nfpF/48b8a6eb -->
     <title>MiEmpresa.com</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" media="(hover:none), (pointer:coarse), (max-width: 600px), (max-device-width: 600px)" href="index-mob.css" id="mobCss">
-    <link rel="stylesheet" media="only screen and (min-width: 800px) or (min-device-width: 800px)" href="index-fonts.css">
+    <link rel="stylesheet" media="(max-width: 600px), (max-device-width: 600px)" href="index-mob.css" id="mobCss">
+    <link rel="stylesheet" media="(min-width: 800px), (min-device-width: 800px)" href="index-fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -37,14 +37,7 @@
                     <a href="index.html"><img src="https://i.postimg.cc/0N2sn70d/home.png" alt=""></a>
                     <ul class="nav-list">
                         <!-- https://postimg.cc/delete/y2WHbLsM/1e113757 -->
-                        <li class="nav-element"><p>Recomendaciones</p>
-                            <ul>
-                                <li><a href="programando.html">Programando</a></li>
-                                <li><a href="disenando.html">Diseñando</a></li>
-                                <li><a href="comunicando.html">Comunicando</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-element"><a href="recomendaciones-finales.html">Recomendaciones Finales</a></li>
+                        <li class="nav-element"><a href="sobre-mi.html">Sobre mí</a></li>
                     </ul>
                 </nav>
             </div>
@@ -53,10 +46,7 @@
     <div class="menu-mob" id="menuMob">
         <div class="menu-mob-content">
             <li class="mob-element"><p>Puntos de Vista*</p></li>
-            <li class="mob-info"><a href="programando.html">Programando</a></li>
-            <li class="mob-info"><a href="disenando.html">Diseñando</a></li>
-            <li class="mob-info"><a href="comunicando.html">Comunicando</a></li>
-            <li class="mob-element"><a href="recomendaciones-finales.html">Recomendaciones Finales</a></li>
+            <li class="mob-element"><a href="sobre-mi.html">Sobre mí</a></li>
         </div>
     </div>
     <div class="title">
@@ -157,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            <div id="mainTips">
+            <div id="mainTips" aria-hidden="true">
                 <div id="mainTipsContainer">
                     <i class="fa fa-times" onclick="hideTips()"></i>
                     <h3>¡Espera! Antes revisa:</h3>
