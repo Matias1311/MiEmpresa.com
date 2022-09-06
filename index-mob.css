@@ -4,12 +4,15 @@
 body {
     font-size: 1em;
 }
-.nav-list {
-    display: none;
+.navigation {
+    flex-direction: row-reverse;
+    align-items: center;
 }
-.navigation>a {
+.navigation a {
     display: block;
     margin-right: 8px;
+    padding: 4px;
+    width: auto;
 }
 .header-content {
     margin: 0;
@@ -19,6 +22,9 @@ body {
 }
 .mob-info {
     padding-left: 12px;
+}
+.page-title {
+    font-size: 0.8rem;
 }
 .title {
     height: 60vh;
