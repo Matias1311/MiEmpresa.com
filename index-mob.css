@@ -35,19 +35,45 @@ body {
 .title>img {
     width: 100vw;
 }
+.mob-title {
+    display: block;
+}
+.menu-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 8px;
+    height: calc(100% - 16px);
+    padding: 8px 0px;
+}
+.menu-logo img {
+    height: 32px;
+    margin: 0;
+    flex-grow: 1;
+}
+.menu-logo h1 {
+    color: white;
+    font-size: 0.75rem;
+}
+.page-title {
+    display: none;
+}
+.header {
+    justify-content: space-between;
+}
+.header-content {
+    width: auto;
+}
 .banner {
     right: calc(-100vw - 40px);
     width: calc(100vw - 40px);
+    z-index: 1000;
 }
 #tips h2 {
     width: 100%;
     margin-top: 32px;
 }
-.back, .next {
-    margin: 0 !important;
-    top: -36px;
-}
-#demo {
+/* #demo {
     margin: 0px !important;
     padding: 12px;
     width: calc(100vw - 64px);
@@ -94,7 +120,7 @@ body {
 }
 #demoBanner {
     min-width: 180px;
-}
+} */
 .steps {
     flex-direction: column;
     padding-bottom: 0;
@@ -114,7 +140,7 @@ body {
 }
 #mainTips video {
     height: auto;
-    width: 90vw;
+    width: 88vw;
     transform: scale(1.25);
     max-height: 70vh;
 }
@@ -122,15 +148,12 @@ body {
     padding-bottom: 48px;
 }
 #mainTipsContainer {
-    padding: 8px;
+    padding: 32 12px;
     gap: 8px;
     overflow: hidden;
-    padding-bottom: 64px;
-    padding-top: 32px;
 }
-#mainTips i {
-    z-index: 120;
-    top: 4px;
+#mainTips button {
+    margin-top: 48px;
 }
 .mainTitle img {
     height: 40vh;

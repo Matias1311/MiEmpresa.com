@@ -106,6 +106,7 @@ document.getElementById("timeInput").addEventListener("mouseup", showTips)
 document.getElementById("timeInput").addEventListener("touchend", showTips)
 document.getElementById("timeInput").addEventListener("touchcancel", showTips)
 
+let firstTips = true;
 function showTips() {
     document.getElementById("mainTips").setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -117,6 +118,9 @@ function showTips() {
     document.getElementById("mainTips").style.animation = "show 1s ease 0s 1 normal forwards";
     document.querySelector("#mainTips video").currentTime = 0;
     document.querySelector("#mainTips video").play();
+    if (firstTips == false) {
+        document.querySelector("#mainTipsContainer h3").innerHTML = "Revísalos cuando quieras:"
+    }
 }
 function hideTips() {
     document.getElementById("mainTips").style.animation = "hide 1s ease 0s 1 normal forwards";
@@ -127,6 +131,7 @@ function hideTips() {
         document.getElementById("tipsShow").style.display = "block";
         document.getElementById("mainTips").setAttribute("aria-hidden", "true");
     }, 1000)
+    firstTips = false;
 }
 
 function displayButton(button, buttonNumber) {

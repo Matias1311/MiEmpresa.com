@@ -23,6 +23,35 @@ body {
 .page-title {
     font-size: 0.8rem;
 }
+.mob-title {
+    display: block;
+}
+.menu-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 8px;
+    height: calc(100% - 16px);
+    padding: 8px 0px;
+}
+.menu-logo img {
+    height: 32px;
+    margin: 0;
+    flex-grow: 1;
+}
+.menu-logo h1 {
+    color: white;
+    font-size: 0.75rem;
+}
+.page-title {
+    display: none;
+}
+.header {
+    justify-content: space-between;
+}
+.header-content {
+    width: auto;
+}
 #main {
     position: static;
     flex-direction: column;

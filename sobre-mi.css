@@ -54,6 +54,9 @@ body {
 .page-title {
     padding-top: 1px;
 }
+.mob-title {
+    display: none;
+}
 .menu-mob {
     position: fixed;
     height: calc(100vh - 84px);
@@ -184,6 +187,7 @@ body {
 .navigation {
     display: inline-flex;
     align-items: center;
+    margin-right: 12px;
 }
 .nav-list {
     margin-left: 8px;
@@ -432,6 +436,14 @@ body {
 }
 .footer-elements {
     padding: 32px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+.footer-elements img {
+    height: 48px;
+    filter: invert(1);
 }
 .footer-elements * {
     color: white;

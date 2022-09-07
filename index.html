@@ -12,22 +12,19 @@
     <!-- https://postimg.cc/delete/8q73nfpF/48b8a6eb -->
     <title>MiEmpresa.com</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" media="(max-width: 600px), (max-device-width: 600px)" href="index-mob.css" id="mobCss">
+    <link rel="stylesheet" media="(max-width: 900px), (max-device-width: 900px)" href="index-mob.css" id="mobCss">
     <link rel="stylesheet" media="(min-width: 800px), (min-device-width: 800px)" href="index-fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <div class="header">
-            <div class="menu-icon">
-                <img id="menuIconOpen" src="https://i.postimg.cc/XNCWvFnG/menu.png" alt="" onclick="menuMobAnimation()">
-                <!-- Removal Link: https://postimg.cc/delete/1dpSVBrv/f207f193 -->
-                <img id="menuIconClose" src="https://i.postimg.cc/VkKW35SD/menu-close.png" alt="" onclick="menuMobAnimation()">
-                <!-- Removal Link: https://postimg.cc/delete/z6ck5KMN/0ce4117c -->
-            </div>
             <div class="menu-logo">
                 <img src="https://i.postimg.cc/ydN5P6jC/Mi-Empresa-com-Logo-1-remove-bg.png" alt="">
                 <!-- https://postimg.cc/delete/twVVPNVz/de579832 -->
+                <div class="mob-title">
+                    <h1>MiEmpresa.com</h1>
+                </div>
             </div>
             <div class="header-content">
                 <div class="page-title">
@@ -37,6 +34,7 @@
                     <a href="index.html"><img src="https://i.postimg.cc/0N2sn70d/home.png" alt=""></a>
                         <!-- https://postimg.cc/delete/y2WHbLsM/1e113757 -->
                         <a href="sobre-mi.html">Sobre mí</a>
+                        <a href="https://forms.office.com/r/jtJ4B4SC2z">Encuesta</a>
                     </ul>
                 </nav>
             </div>
@@ -49,7 +47,7 @@
             <h1 class="title-txt">MiEmpresa.com</h1>
             <p class="title-desc">Brindamos recomendaciones de los profesionales más influyentes en el proceso de elaboración de tu sitio web: programadores, diseñadores gráficos, fotógrafos, mercadólogos y comunicadores.</p>
         </div>
-        </div>
+    </div>
     <!-- <section class="form">
         <div id="demo">
             <h2 id="demoh2"></h2>
@@ -142,9 +140,9 @@
             </div>
             <div id="mainTips" aria-hidden="true">
                 <div id="mainTipsContainer">
-                    <i class="fa fa-times" onclick="hideTips()"></i>
                     <h3>¡Espera! Antes revisa:</h3>
                     <video playsinline autoplay muted src="assets/10 tips.mp4" id="tenVideo"></video>
+                    <button onclick="hideTips()">Cerrar</button>
                 </div>
             </div>
             <div class="mainContent">
@@ -309,7 +307,7 @@
                 </section>
                 <section class="recommendations">
                     <h3>Recomendaciones de Expertos</h3>
-                    <p>Estas son algunas recomendaciones que recopilamos para tí, que provienen de expertos y profesionales como programadores, diseñadores gráficos, comunicadores, fotógrafos, y expertos en marketing.</p>
+                    <p>Estas son algunas recomendaciones que recopilamos para tí, que provienen de los profesionales más influyentes en el proceso de elaboración de tu sitio web: programadores, diseñadores gráficos, fotógrafos, mercadólogos y comunicadores.</p>
                     <div id="mainButtonList">
                         <button onclick="displayButton(this, 1)">
                             <h4>Programar</h4>
@@ -1029,7 +1027,7 @@
     </section>
     <section class="references">
         <button class="references-title" onclick="expandReferences()">
-            <h2>Referencias</h2>
+            <h3>Referencias</h3>
             <img id="referencesImg"src="https://i.postimg.cc/pTkv0TXZ/down-arrow.png" alt="down-arrow">
             <!-- Removal link: https://postimg.cc/delete/V3Zw2tDP/1e500b4f -->
         </button>
@@ -1075,7 +1073,8 @@
     <footer>
         <div class="footer-wrapper">
             <div class="footer-elements">
-                <h3>Hecho por: Matías A.</h3>
+                <h3>Elaborado por:</h3>
+                <img src="https://see.fontimg.com/api/renderfont4/PKOBd/eyJyIjoiZnMiLCJoIjo5OSwidyI6MTUwMCwiZnMiOjY2LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/TWF0w61hc0Eu/anjhay.png" alt="Calligraphy fonts">
             </div>
         </div>
     </footer>
