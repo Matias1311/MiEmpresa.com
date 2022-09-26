@@ -63,19 +63,17 @@ function formChange(display) {
             break;
     }
 }
-let displayInputHelp = 2;
+// let displayInputHelp = 2;
+let displayHelp = true;
 let value;
 function updateMain(e) {
     value = Math.round((e.value-e.min)/(e.max-e.min)*100);
     e.style.background = 'linear-gradient(to right, var(--secondary-color) 0%, var(--secondary-color) ' + value + '%, #fff ' + value + '%, white 100%)';
     console.log(value);
-    if (displayInputHelp > 0) {
+    if (displayHelp) {
         document.querySelector(".mainContent").style.display = "flex";
-        displayInputHelp--;
-    }
-    if(displayInputHelp === 0) {
         document.querySelector("#timeContainer>h3").style.display = "none";
-        displayInputHelp--;
+        !displayHelp;
     }
     if (0 <= value && value <= 25) {
         document.getElementById("store").style.display = "block";
